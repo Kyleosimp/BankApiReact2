@@ -8,25 +8,34 @@ import Axios from 'axios';
 function CreateCustomer () {
     const API_URL = 'http://localhost:8080/customers';
 
+    const emptyData = {
+        first_name: "",
+        last_name: "",
+        street_name: "",
+        street_number: "",
+        city: "",
+        state: "",
+        zip: ""
+        }
+
     const [data, setData] = useState({
         first_name: "",
         last_name: "",
-        address: [{
-            street_name: "",
-            street_number: "",
-            city: "",
-            state: "",
-            zip: ""
-        }
-        ]
-    })
+        street_name: "",
+        street_number: "",
+        city: "",
+        state: "",
+        zip: ""
+        })
+
 
     function handle(e){
-        const newdata = { ...data}
-        newdata[e.target.id] = e.target.value
-        setData(newdata)
-        console.log(newdata)
+        const newdata = { ...data};
+        newdata[e.target.id] = e.target.value;
+        setData(newdata);
+        console.log(newdata);
     }
+
 
     function submit(e){
         e.preventDefault();
@@ -42,8 +51,8 @@ function CreateCustomer () {
             }]
         })
             .then(res => {
-                console.log(res.data)
-                
+                console.log(res.data);
+                setData(emptyData);
             })
     }
 
@@ -63,27 +72,27 @@ function CreateCustomer () {
 
                 <Form.Group className="mb-3">
                     <Form.Label>Street Number</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="street_number" value={data.address.street_number}type="streetnumber" placeholder="Enter street number" />
+                    <Form.Control onChange={(e)=>handle(e)} id="street_number" value={data.street_number}type="streetnumber" placeholder="Enter street number" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" >
                     <Form.Label>Street Name</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="street_name" value={data.address.street_name} type="streetname" placeholder="Enter street name" />
+                    <Form.Control onChange={(e)=>handle(e)} id="street_name" value={data.street_name} type="streetname" placeholder="Enter street name" />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>City</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="city" value={data.address.city} type="city" placeholder="Enter city" />
+                    <Form.Control onChange={(e)=>handle(e)} id="city" value={data.city} type="city" placeholder="Enter city" />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>State</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="state" value={data.address.state} type="state" placeholder="Enter state" />
+                    <Form.Control onChange={(e)=>handle(e)} id="state" value={data.state} type="state" placeholder="Enter state" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" >
                     <Form.Label>Zip</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="zip" value={data.address.zip} type="zip" placeholder="Enter zip code" />
+                    <Form.Control onChange={(e)=>handle(e)} id="zip" value={data.zip} type="zip" placeholder="Enter zip code" />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">
