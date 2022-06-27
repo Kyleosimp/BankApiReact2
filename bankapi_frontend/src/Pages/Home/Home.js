@@ -14,9 +14,20 @@ export default function Home() {
             <Link to="/customers">
             <Button variant="outline-success">Customers</Button>
             </Link>
+            <Link to="/accounts">
+            <Button variant="outline-success">Accounts</Button>
+            </Link>
+            <Link to="/viewAccounts">
+            <Button variant="outline-success">View Accounts</Button>
+            </Link>
           </Container>
         </Navbar>
+        <img src='https://th.bing.com/th/id/OIP.s7tbVMVJqm8EtFVsj5_QbQHaD4?pid=ImgDet&rs=1' style={{width: "400px"}} />
+
+     
       </div>
     </div>
+
+ 
   );
 }
