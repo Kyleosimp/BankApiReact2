@@ -10,15 +10,18 @@ export default function Home() {
       <div className="content col-10 col-sm-8 col-md-8 col-lg-4">
         <Navbar bg="light" expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#">Navbar</Navbar.Brand>
+            {/* <Navbar.Brand href="#">Navbar</Navbar.Brand> */}
             <Link to="/customers">
             <Button variant="outline-success">Customers</Button>
             </Link>
             <Link to="/accounts">
             <Button variant="outline-success">Accounts</Button>
             </Link>
-            <Link to="/viewAccounts">
-            <Button variant="outline-success">View Accounts</Button>
+            <Link to="/transactions">
+            <Button variant="outline-success">Transactions</Button>
+            </Link>
+            <Link to="/transactions">
+            <Button variant="outline-success">Bills</Button>
             </Link>
           </Container>
         </Navbar>

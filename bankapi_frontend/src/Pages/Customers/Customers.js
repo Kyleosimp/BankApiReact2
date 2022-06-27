@@ -73,6 +73,11 @@ class Customers extends Component {
                     <Link to="/newcustomer">
                     <Button variant="outline-success">Create new customer</Button>
                     </Link>
+                    <br></br>
+                    <br></br>
+                    <Link to="/viewAccounts">
+                    <Button variant="outline-success">View Accounts</Button>
+                    </Link>
                     </Container>
         )
     }
