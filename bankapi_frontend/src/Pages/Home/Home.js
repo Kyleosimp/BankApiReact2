@@ -20,12 +20,12 @@ export default function Home() {
             <Link to="/transactions">
             <Button variant="outline-success">Transactions</Button>
             </Link>
-            <Link to="/transactions">
+            {/* <Link to="/transactions">
             <Button variant="outline-success">Bills</Button>
-            </Link>
+            </Link> */}
           </Container>
         </Navbar>
-        <img src='https://th.bing.com/th/id/OIP.s7tbVMVJqm8EtFVsj5_QbQHaD4?pid=ImgDet&rs=1' style={{width: "400px"}} />
+        <img src='https://th.bing.com/th/id/OIP.s7tbVMVJqm8EtFVsj5_QbQHaD4?pid=ImgDet&rs=1' alt="banking" style={{width: "400px"}} />
 
      
       </div>
