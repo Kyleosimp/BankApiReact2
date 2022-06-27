@@ -11,6 +11,9 @@ export default function Home() {
         <Navbar bg="light" expand="lg">
           <Container fluid>
             <Navbar.Brand href="#">Navbar</Navbar.Brand>
+            <Link to="/transactions">
+            <Button variant="outline-success">Transactions</Button>
+            </Link>
             <Link to="/customers">
             <Button variant="outline-success">Customers</Button>
             </Link>
