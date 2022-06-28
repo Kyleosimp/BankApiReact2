@@ -25,6 +25,9 @@ class Transactions extends Component {
             <Link to="/home">
             <Button variant="outline-success">Home</Button>
             </Link>
+            {/* <Link to="/accounts/withdrawal/:id">
+            <Button variant="outline-success">Create Withdrawal</Button>
+            </Link> */}
         </Container>
       )
     }

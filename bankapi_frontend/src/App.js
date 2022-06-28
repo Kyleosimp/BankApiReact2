@@ -8,6 +8,8 @@ import CreateAccount from './Pages/Account/CreateAccount';
 import Transactions from './Pages/Transactions/Transactions';
 import Home from './Pages/Home/Home';
 import ListAccounts from './Pages/Account/ListAccounts.js';
+import CreateWithdrawal from './Pages/Transactions/CreateWithdrawal';
+import CreateDeposit from './Pages/Transactions/CreateDeposit';
 function App() {
   return (
     <Router>
@@ -21,6 +23,8 @@ function App() {
         <Route path="/customers/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
+        <Route path="/accounts/withdrawal/:id" element={<CreateWithdrawal/>}></Route>
+        <Route path="/accounts/deposit/:id" element={<CreateDeposit/>}></Route>
         <Route path="/*" element={<Home/>}></Route>
       </Routes>
     </Router>
