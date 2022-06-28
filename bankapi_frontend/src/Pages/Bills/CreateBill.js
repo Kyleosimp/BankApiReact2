@@ -1,8 +1,11 @@
 import React from 'react';
-import {Link} from '../../../../react-router-dom';
+import {Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { Button,Form } from 'react-bootstrap';
-import {BillService } from './BillService';
+// import {BillService } from './BillService';
+import BillService from './BillService';
+import { useEffect, useState } from "react";
+
 
 const CreateBillComponent = () => {
     const {status, setStatus} = useState('');
@@ -128,17 +131,20 @@ const CreateBillComponent = () => {
                                     ></input>
                                 </div>
                                 <div className="form-group mb-2">
-                                    <label className="form-label">Account</label> <br />
+                                    <label className="form-label">Account ID:</label> <br />
                                     <input type="text"
-                                    placeholder='Enter Account'
+                                    placeholder='Enter Account ID'
                                     name="account"
                                     className="form-control"
-                                    value={account}
-                                    onChange={(e) => setAccount(e.target.value)}
+                                
+                                    onChange={(e) => (account.id = e.target.value)}
                                     ></input>
                                 </div>
+                                <Link to="/bill">
+                                    <Button variant="outline-success">Bill</Button>
+                                </Link>
                                 <div className="form-group mb-2">
-                                    <Button variant="primary" type="submit" onClick={createBill}>Create Bill</Button>
+                                    <Button variant="primary" type="submit" className="submitButton">Create Bill</Button>
                                 </div>
                             </Form>
                         </div>
@@ -149,4 +155,6 @@ const CreateBillComponent = () => {
     );
 }
 
-export default CreateBill;
+// export default CreateBill;
+// export default createBill;
+export default CreateBillComponent;

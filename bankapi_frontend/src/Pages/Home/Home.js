@@ -20,6 +20,9 @@ export default function Home() {
             <Link to="/transactions">
             <Button variant="outline-success">Transactions</Button>
             </Link>
+            <Link to="/createBill">
+            <Button variant="outline-success">Bills</Button>
+            </Link>
             {/* <Link to="/transactions">
             <Button variant="outline-success">Bills</Button>
             </Link> */}
