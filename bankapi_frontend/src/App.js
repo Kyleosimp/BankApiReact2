@@ -21,10 +21,12 @@ function App() {
         <Route path="/newcustomer" element={<CreateCustomer/>}></Route>
         <Route path="/transactions" element={<Transactions/>}></Route>
         <Route path="/customers/edit/:id" element={<UpdateCustomer/>}></Route>
+        <Route path="/accounts/withdrawl/:id" element={<CreateWithdrawal/>}></Route>
+        <Route path="/accounts/deposit/:id" element={<CreateDeposit/>}></Route>
         <Route path="/accounts/customer/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
-        <Route path="/accounts/withdrawal/:id" element={<CreateWithdrawal/>}></Route>
-        <Route path="/accounts/deposit/:id" element={<CreateDeposit/>}></Route>
+        <Route path='/createBill' element={<CreateBill/>}></Route>
+        <Route path='/ListBills'element={<DisplayBillsComponent/>}></Route>
         <Route path="/*" element={<Home/>}></Route>
       </Routes>
     </Router>
