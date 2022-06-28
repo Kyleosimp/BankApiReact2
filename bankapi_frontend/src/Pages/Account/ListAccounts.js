@@ -25,8 +25,16 @@ class ListAccounts extends Component {
         window.location.reload(false);
       }
 
-    deleteCustomer(id) {
+    deleteAccount(id) {
         Axios.delete(`http://localhost:8080/accounts/${id}`);
+        this.refreshPage();
+    }
+    editAccount(id) {
+        Axios.put(`http://localhost:8080/accounts/edit/${id}`);
+        this.refreshPage();
+    }
+    getAccount(id) {
+        Axios.get(`http://localhost:8080/accounts/${id}`);
         this.refreshPage();
     }
 
@@ -43,8 +51,14 @@ class ListAccounts extends Component {
                   <td>{account.balance}</td>
                   <td>
                   <Button onClick={() => {
+                    this.getAccount((account.id))
+                  }} variant="warning"  style={{ marginRight: '0.7em', color: 'white'}}>View</Button>
+                    <Button onClick={() => {
+                    
+                  }} variant="primary" style={{ marginRight: '0.7em'}}>Update</Button>
+                    <Button onClick={() => {
                     this.deleteCustomer((account.id))
-                  }} variant="danger">Delete</Button>
+                  }} variant="danger"  style={{ marginRight: '0.7em'}} >Delete</Button>
                   </td>
                 </tr>  
             )
@@ -70,11 +84,6 @@ class ListAccounts extends Component {
                     <br></br>
                     <Link to="/home">
                     <Button variant="outline-success">Home</Button>
-                    </Link>
-                    <br></br>
-                    <br></br>
-                    <Link to="/newcustomer">
-                    <Button variant="outline-success">Create new customer</Button>
                     </Link>
                     <br></br>
                     <br></br>
