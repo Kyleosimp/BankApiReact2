@@ -8,8 +8,8 @@ import CreateAccount from './Pages/Account/CreateAccount';
 import Transactions from './Pages/Transactions/Transactions';
 import Home from './Pages/Home/Home';
 import ListAccounts from './Pages/Account/ListAccounts.js';
-import DisplayBillsComponent from './Pages/Bills/ListBills';
-import CreateBill from './Pages/Bills/CreateBill.js';
+import CreateWithdrawal from './Pages/Transactions/CreateWithdrawal';
+import CreateDeposit from './Pages/Transactions/CreateDeposit';
 function App() {
   return (
     <Router>
@@ -21,7 +21,8 @@ function App() {
         <Route path="/newcustomer" element={<CreateCustomer/>}></Route>
         <Route path="/transactions" element={<Transactions/>}></Route>
         <Route path="/customers/edit/:id" element={<UpdateCustomer/>}></Route>
-
+        <Route path="/accounts/withdrawl/:id" element={<CreateWithdrawal/>}></Route>
+        <Route path="/accounts/deposit/:id" element={<CreateDeposit/>}></Route>
         <Route path="/accounts/customer/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
         <Route path='/createBill' element={<CreateBill/>}></Route>

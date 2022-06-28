@@ -59,6 +59,12 @@ class ListAccounts extends Component {
                     <Button onClick={() => {
                     this.deleteCustomer((account.id))
                   }} variant="danger"  style={{ marginRight: '0.7em'}} >Delete</Button>
+                  <Link to={`/accounts/withdrawal/${account.id}`}>
+                  <Button variant="primary">Create Withdrawal</Button>
+                  </Link>
+                  <Link to={`/accounts/deposit/${account.id}`}>
+                  <Button variant="primary">Create Deposit</Button>
+                  </Link>
                   </td>
                 </tr>  
             )
