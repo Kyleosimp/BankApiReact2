@@ -24,4 +24,5 @@ class BillService {
     }
 }
 
-export default new BillService();
+// export default new BillService();
+export default BillService;
