@@ -1,161 +1,96 @@
-import React, {useState, useEffect} from "react";
-import {Link } from "react-router-dom";
-import { useNavigate, useParams } from "react-router-dom";
-import {Button, Form} from 'react-bootstrap';
-import AccountService from "./AccountService";
+import React, { useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from "react-router-dom"
+import { Button, Container, Form } from 'react-bootstrap';
+import Axios from 'axios';
 
 
-const CreateAccount = () =>{
+function CreateAccount () {
 
-    const [type, setType] = useState('');
-    const [nicekname, setNickname] = useState ('');
-    const [rewards, setRewards]  = useState('');
-    const [balance, setBalance] = useState ('');
-    const [customer, setCustomer] = useState({id: ''});
+    const API_URL = 'http://localhost:8080/viewAccounts';
 
+    const emptyData = {
+        type: "",
+        nickname: "",
+        rewards: "",
+        balance: "",
+        customer_customer_id: ""
+        }
 
-
-  const navigate = useNavigate;
-  const {id} = useParams;
-
-   const account = { type, nicekname, rewards, balance, customer};
-
-
-   if (id){
-    AccountService.updateAccount(id, account).then(() =>{
-   navigate("/accounts"); 
-
-
-    }).catch((error)=>{
-        console.log(error)
-    });
+    const [data, setData] = useState({
+        type: "",
+        nickname: "",
+        rewards: "",
+        balance: "",
+        customer_customer_id: {id: ''}
+        })
 
 
-   }else {
-
-     AccountService.createAccount(account).then((response)=>{
-     console.log(response.data)
-
-    // navigate("/accounts");
-     }).catch((error)=> {
-        console.log(error);
-     });
-
-   }
-
-  
-   const title = () => {
-
-    if (id) {
-        return <h2 className="text-center">Update Account</h2>
-    }else{
-        return <h2 className="text-Center">Create Account</h2>
+    function handle(e){
+        const newdata = { ...data};
+        newdata[e.target.id] = e.target.value;
+        setData(newdata);
+        console.log(newdata);
     }
-   }
- 
 
-   useEffect(() => {
-    AccountService.getAccount(id).then((repsonse)=>{
-        console.log(repsonse.data.data)
 
-        setType(repsonse.data.data.type);
-        setNickname(repsonse.data.data.nickname);
-        setRewards(repsonse.data.data.rewards);
-        setBalance(repsonse.data.data.balance);
-        setCustomer(repsonse.data.data.customer.id);
+    function submit(e){
+        e.preventDefault();
+        Axios.post(API_URL, {
 
-    }).catch((e)=>{
-        console.log(e); 
-    }); 
-   }, [id]);
+            type: data.type,
+            nickname: data.nickname,
+            rewards: data.rewards,
+            balance: data.balance,
+            // customer_customer_id: data.customer_customer_id
+          
+        })
+            .then(res => {
+                console.log(res.data);
+                setData(emptyData);
+            })
+    }
 
-   return (
-    <div>
-      <br /> 
-      <div className="container">
-        <div className="row">
-          <div style={{ backgroundColor: "white", color: "black" }} className="card col-md-6 offset-md-3 offset-md-3">
-            { title() }
-            <div className="card-body">
-              <Form >
-                <div className="form-group mb-2">
-                  <label className="form-label">Account Type:</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Account Type"
-                    name="type"
-                    className="form-control"
-                    value={type}
-                    onChange={(e) => setType(e.target.value)}
-                  ></input>
-                </div>
 
-                <div className="form-group mb-2">
-                  <label className="form-label">Nickname:</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Account Nickname"
-                    name="nickname"
-                    className="form-control"
-                    value={nicekname}
-                    onChange={(e) => setNickname(e.target.value)}
-                  ></input>
-                </div>
+    return (
+              <Container>
+                <Form onSubmit={(e)=> submit(e)}>
+                <Form.Group className="mb-3">
+                    <Form.Label>Type</Form.Label>
+                    <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  placeholder="Enter Type" />
+                </Form.Group>
 
-                <div className="form-group mb-2">
-                  <label className="form-label">Rewards:</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Reward Points"
-                    name="rewards"
-                    className="form-control"
-                    value={rewards}
-                    onChange={(e) => setRewards(e.target.value)}
-                  ></input>
-                </div>
+                <Form.Group className="mb-3">
+                    <Form.Label>Nickname</Form.Label>
+                    <Form.Control onChange={(e)=>handle(e)} id="nickname" value={data.nickname}  placeholder="Enter Nickname" />
+                </Form.Group>
 
-                <div className="form-group mb-2">
-                  <label className="form-label">Balance:</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Current Balance"
-                    name="balance"
-                    className="form-control"
-                    value={balance}
-                    onChange={(e) => setBalance(e.target.value)}
-                  ></input>
-                </div>
+                <Form.Group className="mb-3">
+                    <Form.Label>Rewards</Form.Label>
+                    <Form.Control onChange={(e)=>handle(e)} id="rewards" value={data.rewards}type="rewards" placeholder="Enter Rewards" />
+                </Form.Group>
 
-                <div className="form-group mb-2">
-                  <label className="form-label">Customer ID:</label>
-                  <input
-                    type="text"
-                    placeholder="Enter Customer ID"
-                    name="customer"
-                    className="form-control"
-                   
-                    onChange={(e) => (customer.id = e.target.value)}
-                  ></input>
-                </div>
-    
-                <Link to="/customers">
-                <Button variant="outline-success" >Back</Button>
-                </Link>
-                <Button variant="success" type="submit" className="submitButton" style={{ marginLeft: "20px" }}>
+                <Form.Group className="mb-3" >
+                    <Form.Label>Balance</Form.Label>
+                    <Form.Control onChange={(e)=>handle(e)} id="balance" value={data.balance} type="balance" placeholder="Enter Balance" />
+                </Form.Group>
+
+                <Form.Group className="mb-3">
+                    <Form.Label>Customer ID</Form.Label>
+                    <Form.Control onChange={(e)=>handle(e)} id="customer_customer_id" value={data.customer_customer_id} type="customer_customer_id" placeholder="Enter Customer ID" />
+                </Form.Group>
+
+
+                <Button variant="success" type="submit">
                     Submit
                 </Button>
-                
-                {/* <Button type="submit" className="btn btn-primary" onClick={(e) => createOrUppdateAccount(e)} disabled={ !type || !nickname || !rewards || !balance || !customer.id }>Submit</Button>
-                <Link to="/accounts" className="btn btn-danger" style={{ marginLeft: "453px" }}>Cancel</Link>
-             */}
-              </Form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-
+                </Form>
+                <br></br>
+                <Link to="/customers">
+                <Button variant="outline-success">Back to Customers</Button>
+                </Link>
+              </Container>
+    )
 }
 
-export default CreateAccount; 
+export default CreateAccount;
