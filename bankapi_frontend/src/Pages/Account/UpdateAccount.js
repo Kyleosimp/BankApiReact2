@@ -5,25 +5,21 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 
 
-function CreateAccount () {
+
+function UpdateAccount () {
 
     // /accounts/customer/${customer.id}
     const params = useParams()
-    const API_URL = `http://localhost:8080/customers/${params.id}/accounts`;
+  //  "/accounts/customer/edit/:id"
+  const API_URL = `http://localhost:8080/customers/${params.id}/accounts`;
 
   //  const params = useParams()
 
-    const emptyData = {
-        type: "",
-        nickname: "",
-        rewards: "",
-        balance: "",
-        customer_customer_id: ""
-        }
+
 
     const [data, setData] = useState({
         type: "",
-        nickname: "",
+        nickname:"",
         rewards: "",
         balance: "",
         customer_customer_id: params.id
@@ -97,4 +93,4 @@ function CreateAccount () {
     )
 }
 
-export default CreateAccount;
+export default UpdateAccount;

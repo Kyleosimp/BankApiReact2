@@ -14,7 +14,7 @@ export default function Home() {
             <Link to="/customers">
             <Button variant="outline-success">Customers</Button>
             </Link>
-            <Link to="/accounts">
+            <Link to="/viewAccounts">
             <Button variant="outline-success">Accounts</Button>
             </Link>
             <Link to="/transactions">
