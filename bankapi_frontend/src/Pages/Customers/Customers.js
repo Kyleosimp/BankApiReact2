@@ -27,7 +27,7 @@ class Customers extends Component {
 
     deleteCustomer(id) {
         Axios.delete(`http://localhost:8080/customers/${id}`);
-        // this.refreshPage();
+        this.refreshPage();
     }
 
     render(){
@@ -39,7 +39,7 @@ class Customers extends Component {
                 <tr key={customer.id}> 
                   <td>{customer.id}</td> 
                   <td>{customer.first_name} {customer.last_name}</td>
-                  <td>{customer.address.map(address =><div key={address.id}>{address.street_number}  {address.street_name} {address.city} {address.state} {address.zip}</div>)}</td>
+                  <td>{customer.address.map(address => <div>{address.street_number}  {address.street_name} {address.city} {address.state} {address.zip}</div>)}</td>
                   <td>
                   <Button onClick={() => {
                     this.deleteCustomer((customer.id))

@@ -1,34 +1,30 @@
-import axios from 'axios';
+// import axios from 'axios'
 
-const ACCOUNT_URL = "http://localhost:8080/accounts";
+// const ACCOUNT_BASE_API = "http://localhost:8080/accounts";
 
-class AccountService {
+// class AccountService { 
 
-    createAccount(account){
-        return axios.post(ACCOUNT_URL, + account)
-    }
+//     createAccount(account) { 
+//         return axios.post(ACCOUNT_BASE_API, account)
+//     }
 
-    getAccount(id){
-        return axios.get(ACCOUNT_URL + '/' + id)
-    }
-  
-   updateAccount (id, account) {
-    return axios.put(ACCOUNT_URL + '/' + id, account)
-   }   
+//     getAccount(id) {
+//         return axios.get(ACCOUNT_BASE_API + '/' + id)
+//     }
 
+//     getAllAccounts() { 
+//         return axios.get(ACCOUNT_BASE_API)
+//     }
 
- deleteAccount(id){
+//     updateAccount(id, account) {
+//         return axios.put(ACCOUNT_BASE_API + '/' + id, account)
+//     }
 
-    return axios.delete(ACCOUNT_URL+ '/' + id)
- }
+//     deleteAccount(id) {
+//         return axios.delete(ACCOUNT_BASE_API + '/' + id)
+//     }
+    
+// }
 
+// export default new AccountService();
 
-//  getAccounts(){
-//     return axios.get(ACCOUNT_URL +  '/' + "ViewAccounts" )
-//  }
-
-
-
-}
-
-export default new AccountService; 
