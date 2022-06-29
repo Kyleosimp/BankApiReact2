@@ -14,7 +14,9 @@ class ListBills extends Component{
 
     async componentDidMount() {
         try {
+
             const response = await fetch('http://localhost:8080/bill');
+
             const data = await response.json();
             console.log(data);  
             this.setState({data});

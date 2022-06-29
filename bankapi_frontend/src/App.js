@@ -31,7 +31,7 @@ function App() {
         <Route path="/accounts/customer/edit/:id" element={<UpdateAccount/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
         <Route path="/accountsdetails/customer/:id" element={<AccountDetails/>}></Route>
-        <Route path="/accounts/withdrawl/:id" element={<CreateWithdrawal/>}></Route>
+        <Route path="/accounts/withdrawal/:id" element={<CreateWithdrawal/>}></Route>
         <Route path="/accounts/deposit/:id" element={<CreateDeposit/>}></Route>
         <Route path="/accounts/customer/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
