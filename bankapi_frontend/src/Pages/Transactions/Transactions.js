@@ -53,7 +53,7 @@ class Transactions extends Component {
 
         let tb_data2 = data2.map((withdrawal) => {
           return (
-              <tr key={withdrawal.id}> 
+              <tr key={withdrawal.account.id}> 
                 <td>{withdrawal.id}</td> 
                 <td>{withdrawal.transactionDate}</td>
                 <td>{withdrawal.description}</td>
@@ -67,7 +67,7 @@ class Transactions extends Component {
           let tb_data3 = data3.map((deposit) => {
             return (
                 <tr key={deposit.id}> 
-                  <td>{deposit.id}</td> 
+                  <td>{deposit.account.id}</td> 
                   <td>{deposit.transaction_date}</td>
                   <td>{deposit.description}</td>
                   <td></td>
