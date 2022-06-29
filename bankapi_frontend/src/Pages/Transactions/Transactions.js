@@ -73,7 +73,7 @@ class Transactions extends Component {
                   <td></td>
                   <td></td>
                   <td>${deposit.amount}</td>
-                  <td>${deposit.account.balance-deposit.amount}</td>
+                  <td>${deposit.account.balance+deposit.amount}</td>
                   
                 </tr>  
             )
