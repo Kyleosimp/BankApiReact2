@@ -8,6 +8,10 @@ import CreateAccount from './Pages/Account/CreateAccount';
 import Transactions from './Pages/Transactions/Transactions';
 import Home from './Pages/Home/Home';
 import ListAccounts from './Pages/Account/ListAccounts.js';
+import DisplayLoanRequest from './Pages/LoanRequest/DisplayLoanRequest.js';
+
+
+
 function App() {
   return (
     <Router>
@@ -18,6 +22,7 @@ function App() {
         <Route path='/viewAccounts' element={<ListAccounts/>}></Route>
         <Route path="/newcustomer" element={<CreateCustomer/>}></Route>
         <Route path="/transactions" element={<Transactions/>}></Route>
+        <Route path="/loanrequests" element={<DisplayLoanRequest/>}></Route>
         <Route path="/*" element={<Home/>}></Route>
       </Routes>
     </Router>
