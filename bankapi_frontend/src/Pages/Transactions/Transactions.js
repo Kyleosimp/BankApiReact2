@@ -81,7 +81,7 @@ class Transactions extends Component {
       return (
         <Container>
             <h1>TRANSACTIONS</h1>
-            <Table>
+            <Table striped bordered>
                 <thead>
                     <tr>
                         <th>AccountID</th>
