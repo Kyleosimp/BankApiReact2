@@ -10,6 +10,8 @@ import Home from './Pages/Home/Home';
 import ListAccounts from './Pages/Account/ListAccounts.js';
 import CreateWithdrawal from './Pages/Transactions/CreateWithdrawal';
 import CreateDeposit from './Pages/Transactions/CreateDeposit';
+import CreateBill from './Pages/Bills/CreateBill';
+import ListBills from './Pages/Bills/ListBills';
 function App() {
   return (
     <Router>
@@ -26,7 +28,7 @@ function App() {
         <Route path="/accounts/customer/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
         <Route path='/createBill' element={<CreateBill/>}></Route>
-        <Route path='/ListBills'element={<DisplayBillsComponent/>}></Route>
+        <Route path='/ListBills'element={<ListBills/>}></Route>
         <Route path="/*" element={<Home/>}></Route>
       </Routes>
     </Router>
