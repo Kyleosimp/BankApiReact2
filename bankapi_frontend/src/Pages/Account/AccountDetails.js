@@ -8,7 +8,7 @@ import axios from 'axios';
 
 
 
-function UpdateAccount () {
+function AccountDetails () {
 
     // /accounts/customer/${customer.id}
     const params = useParams()
@@ -76,39 +76,42 @@ function UpdateAccount () {
                 <Form onSubmit={(e)=> submit(e)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Type</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  placeholder="Enter Type" />
+                    <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  placeholder="Enter Type"disabled />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>Nickname</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="nickname" value={data.nickname}  placeholder="Enter Nickname" />
+                    <Form.Control onChange={(e)=>handle(e)} id="nickname" value={data.nickname}  placeholder="Enter Nickname"disabled />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
                     <Form.Label>Rewards</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="rewards" value={data.rewards}type="rewards" placeholder="Enter Rewards" />
+                    <Form.Control onChange={(e)=>handle(e)} id="rewards" value={data.rewards}type="rewards" placeholder="Enter Rewards" disabled/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" >
                     <Form.Label>Balance</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="balance" value={data.balance} type="balance" placeholder="Enter Balance" />
+                    <Form.Control onChange={(e)=>handle(e)} id="balance" value={data.balance} type="balance" placeholder="Enter Balance"  disabled/>
                 </Form.Group>
 
                  <Form.Group className="mb-3">
-                    <Form.Label>Account ID</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="customer_customer_id" value={data.id} type="customer_customer_id" placeholder="Enter Customer ID" disabled />
+                    <Form.Label> Account ID</Form.Label>
+                    <Form.Control onChange={(e)=>handle(e)} id="customer_customer_id" value={data.id} type="customer_customer_id" placeholder="Enter Customer ID" disabled/>
                 </Form.Group> 
 
 
-                <Button variant="success" type="submit">
-                    Submit
-                </Button>
+               
                 </Form>
                 <br></br>
-                <Link to="/viewAccounts">
-                <Button variant="outline-success">View Accounts</Button>
+                <Link to="/customers">
+                <Button variant="outline-success">Back to Customers</Button>
                 </Link>
                 <br></br>
+                <br></br>
+                <Link to="/viewAccounts">
+                    <Button variant="outline-success">View Accounts</Button>
+                    </Link>
+                    <br></br>
                     <br></br>
                     <Link to="/home">
                     <Button variant="outline-success">Home</Button>
@@ -117,4 +120,4 @@ function UpdateAccount () {
     )
 }
 
-export default UpdateAccount;
+export default AccountDetails;
