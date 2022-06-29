@@ -10,6 +10,10 @@ class Customers extends Component {
     }
 
     async componentDidMount(){
+        this.refreshList();
+    }
+
+    async refreshList() {
         try{
             const response = await fetch('http://localhost:8080/customers');
             const data = await response.json();
@@ -18,32 +22,38 @@ class Customers extends Component {
         } catch(error){
             console.log(error);
         }
-
-    }
-
-    refreshPage() {
-        window.location.reload(false);
       }
 
     deleteCustomer(id) {
-        Axios.delete(`http://localhost:8080/customers/${id}`);
-        // this.refreshPage();
+      Axios.delete(`http://localhost:8080/customers/${id}`);
+      
+        setTimeout(()=> {
+            this.refreshList()
+        },300);
+
     }
 
     render(){
         console.log('render method called');
         const {data} = this.state;
 
+
         let tb_data = data.map((customer) => {
             return (
                 <tr key={customer.id}> 
                   <td>{customer.id}</td> 
                   <td>{customer.first_name} {customer.last_name}</td>
-                  <td>{customer.address.map(address =><div key={address.id}>{address.street_number}  {address.street_name} {address.city} {address.state} {address.zip}</div>)}</td>
+                  <td>{customer.address.map(address => <div>{address.street_number}  {address.street_name} {address.city} {address.state} {address.zip}</div>)}</td>
                   <td>
                   <Button onClick={() => {
                     this.deleteCustomer((customer.id))
                   }} variant="danger">Delete</Button>
+                  <Link to={`/customers/edit/${customer.id}`}>
+                  <Button variant="primary">Update</Button>
+                  </Link>
+                  <Link to={`/accounts/customer/${customer.id}`}>
+                  <Button variant="primary">Create Account</Button>
+                  </Link>
                   </td>
                 </tr>  
             )
