@@ -56,10 +56,10 @@ class ListAccounts extends Component {
                  
                  
                    <Link to={`/accountsDetails/customer/${account.id}`}>
-                  <Button variant="primary">View</Button>
+                  <Button variant="primary" style={{ marginRight: '0.7em'}}>View</Button>
                   </Link>
                   <Link to={`/accounts/withdrawal/${account.id}`}>
-                  <Button variant="primary">Create Withdrawal</Button>
+                  <Button variant="primary" style={{ marginRight: '0.7em'}}>Create Withdrawal</Button>
                   </Link>
                   <Link to={`/accounts/deposit/${account.id}`}>
                   <Button variant="primary">Create Deposit</Button>

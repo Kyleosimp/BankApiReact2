@@ -99,8 +99,8 @@ function CreateWithdrawal () {
                 </Button>
                 </Form>
                 <br></br>
-                <Link to="/customers">
-                <Button variant="outline-success">Back to Customers</Button>
+                <Link to="/transactions">
+                <Button variant="outline-success">View Transactions</Button>
                 </Link>
               </Container>
     )
