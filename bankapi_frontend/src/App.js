@@ -17,6 +17,7 @@ import DisplayBillsComponent from './Pages/Bills/ListBills';
 import DisplayLoanRequest from './Pages/LoanRequest/DisplayLoanRequest.js';
 
 
+
 function App() {
   return (
     <Router>
@@ -27,7 +28,6 @@ function App() {
         <Route path='/viewAccounts' element={<ListAccounts/>}></Route>
         <Route path="/newcustomer" element={<CreateCustomer/>}></Route>
         <Route path="/transactions" element={<Transactions/>}></Route>
-        <Route path="/loanrequests" element={<DisplayLoanRequest/>}></Route>
         <Route path="/customers/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/edit/:id" element={<UpdateAccount/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
@@ -39,7 +39,8 @@ function App() {
         <Route path='/accounts/bill/:id' element={<CreateBill/>}></Route>
         <Route path='/ListBills'element={<DisplayBillsComponent/>}></Route>
         <Route path="/loanrequests" element={<DisplayLoanRequest/>}></Route>
-        
+
+
         <Route path="/*" element={<Home/>}></Route>
       </Routes>
     </Router>
