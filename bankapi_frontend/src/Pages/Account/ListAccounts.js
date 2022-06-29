@@ -27,16 +27,10 @@ class ListAccounts extends Component {
 
     deleteAccount(id) {
         Axios.delete(`http://localhost:8080/accounts/${id}`);
+        
         this.refreshPage();
     }
-    editAccount(id) {
-        Axios.put(`http://localhost:8080/accounts/edit/${id}`);
-        this.refreshPage();
-    }
-    getAccount(id) {
-        Axios.get(`http://localhost:8080/accounts/${id}`);
-        this.refreshPage();
-    }
+
 
     render(){
         console.log('render method called');
@@ -47,18 +41,22 @@ class ListAccounts extends Component {
                 <tr key={account.id}> 
                   <td>{account.id}</td> 
                   <td>{account.type} </td>
+                  <td>{account.nickname}</td>
                   <td>{account.rewards}</td>
                   <td>{account.balance}</td>
                   <td>
-                  <Button onClick={() => {
-                    this.getAccount((account.id))
-                  }} variant="warning"  style={{ marginRight: '0.7em', color: 'white'}}>View</Button>
+                  <Link to={`/accounts/customer/edit/${account.id}`}>
+                  <Button variant="warning"  style={{ marginRight: '0.7em', color: 'white'}}>Update</Button>
+                  </Link>
+
                     <Button onClick={() => {
-                    
-                  }} variant="primary" style={{ marginRight: '0.7em'}}>Update</Button>
-                    <Button onClick={() => {
-                    this.deleteCustomer((account.id))
+                    this.deleteAccount((account.id))
                   }} variant="danger"  style={{ marginRight: '0.7em'}} >Delete</Button>
+                 
+                 
+                   <Link to={`/accountsDetails/customer/${account.id}`}>
+                  <Button variant="primary">View</Button>
+                  </Link>
                   </td>
                 </tr>  
             )
@@ -69,16 +67,18 @@ class ListAccounts extends Component {
                     <Table striped bordered hover>
                     <thead>
                         <tr>
-                        <th>ID</th>
+                        <th>Account ID</th>
                         <th>Type</th>
                         <th>Nickname</th>
                         <th>Rewards</th>
                         <th>Balance</th>
+                        <th>Actions</th>
+
 
                         </tr>
                     </thead>
                     <tbody>
-                            {tb_data}
+                          {tb_data}
                     </tbody>
                     </Table>
                     <br></br>
