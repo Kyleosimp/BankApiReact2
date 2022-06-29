@@ -8,6 +8,7 @@ class Transactions extends Component {
     data : [],
     data2 : [],
     data3 : []
+    
   }
 
   async componentDidMount(){
@@ -26,16 +27,18 @@ class Transactions extends Component {
         const data3 = await response3.json();
         console.log(data3);
         this.setState({data3});
+        
       } 
       catch(error){
         console.log(error);
       }
+    
 
   }
     render() {
       const {data} = this.state;
       const {data2} = this.state;
-      const {data3} = this.state;
+      const {data3} = this.state;      
 
       let tb_data = data.map((bill) => {
         return (
@@ -46,21 +49,21 @@ class Transactions extends Component {
               <td>${bill.payment_amount}</td>
               <td></td>
               <td></td>
-              <td>${bill.account.balance-bill.payment_amount}</td>
+              <td>${bill.tmp_account_balance}</td>
             </tr>  
         )
         })
 
         let tb_data2 = data2.map((withdrawal) => {
           return (
-              <tr key={withdrawal.account.id}> 
-                <td>{withdrawal.id}</td> 
+              <tr key={withdrawal.id}> 
+                <td>{withdrawal.account.id}</td> 
                 <td>{withdrawal.transactionDate}</td>
                 <td>{withdrawal.description}</td>
                 <td></td>
                 <td>${withdrawal.amount}</td>
                 <td></td>
-                <td>${withdrawal.account.balance-withdrawal.amount}</td>
+                <td>${withdrawal.tmp_account_balance}</td>
               </tr>  
           )
           })
@@ -73,7 +76,8 @@ class Transactions extends Component {
                   <td></td>
                   <td></td>
                   <td>${deposit.amount}</td>
-                  <td>${deposit.account.balance+deposit.amount}</td>
+                  <td>${deposit.tmp_account_balance}</td>
+                  
                   
                 </tr>  
             )
@@ -90,7 +94,7 @@ class Transactions extends Component {
                         <th>Bill</th>
                         <th>Withdrawal</th>
                         <th>Deposit</th>
-                        <th>Balance</th>
+                        <th>Account_Balance</th>
                     </tr>
                 </thead>
                 <tbody>
