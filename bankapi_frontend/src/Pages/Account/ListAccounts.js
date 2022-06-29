@@ -63,8 +63,10 @@ class ListAccounts extends Component {
                   </Link>
                   <Link to={`/accounts/deposit/${account.id}`}>
                   <Button variant="primary">Create Deposit</Button>
-
                   </Link>
+                  <Link to={`/accounts/bill/${account.id}`}>
+                    <Button variant="primary">Create Bill</Button>
+                    </Link>
                   </td>
                 </tr>  
             )

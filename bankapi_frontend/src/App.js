@@ -35,7 +35,7 @@ function App() {
         <Route path="/accounts/deposit/:id" element={<CreateDeposit/>}></Route>
         <Route path="/accounts/customer/edit/:id" element={<UpdateCustomer/>}></Route>
         <Route path="/accounts/customer/:id" element={<CreateAccount/>}></Route>
-        <Route path='/createBill' element={<CreateBill/>}></Route>
+        <Route path='/accounts/bill/:id' element={<CreateBill/>}></Route>
         <Route path='/ListBills'element={<DisplayBillsComponent/>}></Route>
 
         <Route path="/*" element={<Home/>}></Route>

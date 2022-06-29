@@ -1,11 +1,12 @@
 import React, { useState} from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Axios } from 'axios';
-import { Link } from 'react-router-dom';
+import Axios from 'axios';
+import { Link, useParams } from 'react-router-dom';
 
 function CreateBill(){
 
-    const API_URL = 'http://localhost:8080/bill';
+    const params = useParams()
+    const API_URL = `http://localhost:8080/accounts/${params.id}/bill`;
 
     const emptyData = {
         status: "",
@@ -16,7 +17,7 @@ function CreateBill(){
         recurring_date: "",
         upcoming_payment_date: "",
         payment_amount: "",
-        acount_id: ""
+        account_id: ""
     }
 
     const [data, setData] = useState({
@@ -28,7 +29,7 @@ function CreateBill(){
         recurring_date: "",
         upcoming_payment_date: "",
         payment_amount: "",
-        acount_id: {id: ''}
+        account_id: params.id
     })
 
     function handle(e){{
@@ -48,8 +49,7 @@ function CreateBill(){
             payment_date: data.payment_date,
             recurring_date: data.recurring_date,
             upcoming_payment_date: data.upcoming_payment_date,
-            payment_amount: data.payment_amount,
-            account_id: data.account_id
+            payment_amount: data.payment_amount
         })
             .then(res => {
                 console.log(res.data);
@@ -98,11 +98,6 @@ function CreateBill(){
             <Form.Group className="mb-3">
                 <Form.Label>Payment Amount</Form.Label>
                 <Form.Control onChange={(e)=>handle(e)} id="payment_amount" value={data.payment_amount}  placeholder="Enter Payment Amount" />
-            </Form.Group>
-
-            <Form.Group className="mb-3">
-                <Form.Label>Account ID</Form.Label>
-                <Form.Control onChange={(e)=>handle(e)} id="account_id" value={data.account_id}  placeholder="Enter Account ID" />
             </Form.Group>
 
             <Button variant="primary" type="submit">

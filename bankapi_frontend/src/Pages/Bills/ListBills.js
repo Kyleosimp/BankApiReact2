@@ -14,7 +14,9 @@ class ListBills extends Component{
 
     async componentDidMount() {
         try {
-            const response = await fetch('https://localhost:8080/bill');
+
+            const response = await fetch('http://localhost:8080/bill');
+
             const data = await response.json();
             console.log(data);  
             this.setState({data});
@@ -54,7 +56,6 @@ class ListBills extends Component{
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Status</th>
                             <th>Payee</th>
                             <th>Nickname</th>
@@ -73,9 +74,7 @@ class ListBills extends Component{
                 <Link to="/home">   
                 <Button variant="outline-success">Home</Button>
                 </Link>
-                <Link to="/createBill">
-                <Button variant="outline-success">Create Bill</Button>
-                </Link>
+
                 <br></br>
                 <br></br>
             </Container>
