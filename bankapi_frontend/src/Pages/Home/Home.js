@@ -23,9 +23,9 @@ export default function Home() {
             <Link to="/ListBills">
             <Button variant="outline-success">Bills</Button>
             </Link>
-            {/* <Link to="/transactions">
-            <Button variant="outline-success">Bills</Button>
-            </Link> */}
+            <Link to="/loanrequests">
+            <Button variant="outline-success">Loan Requests</Button>
+            </Link>
           </Container>
         </Navbar>
         <img src='https://th.bing.com/th/id/OIP.s7tbVMVJqm8EtFVsj5_QbQHaD4?pid=ImgDet&rs=1' alt="banking" style={{width: "400px"}} />
