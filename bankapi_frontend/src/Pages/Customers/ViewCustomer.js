@@ -1,9 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./styles.css";
 import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import axios from 'axios';
+import "./customersstyles.css";
 
 
 function ViewCustomer () {
@@ -44,7 +44,12 @@ function ViewCustomer () {
 
 
     return (
-        <Container>
+        <div className='myBackground'>
+            <br></br>
+        <Container className="myTable">
+            <br></br>
+            <h3 className="myTitle">View a customer</h3>
+            <br></br>
           <Form>
           <Form.Group className="mb-3" >
               <Form.Label>First Name</Form.Label>
@@ -80,12 +85,26 @@ function ViewCustomer () {
               <Form.Label>Zip</Form.Label>
               <Form.Control  id="zip" value={data.address[0].zip} disabled />
           </Form.Group>
-
+            <br></br>
           </Form>
           <Link to="/customers">
-          <Button variant="outline-success">Back to Customers</Button>
-          </Link>
+                <Button variant="success">Back to Customers</Button>
+            </Link>
+                <br></br>
+                <br></br>
         </Container>
+        <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+        </div>
 );
 }
 

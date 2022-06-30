@@ -1,8 +1,9 @@
-import React, {useEffect,useState} from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
+import "./customersstyles.css";
 
 
 function CreateCustomer () {
@@ -58,7 +59,12 @@ function CreateCustomer () {
 
 
     return (
-              <Container>
+        <div className='myBackground'>
+            <br></br>
+              <Container className="myTable">
+              <br></br>
+                <h3 className="myTitle">Create a customer</h3>
+                <br></br>
                 <Form onSubmit={(e)=> submit(e)}>
                 <Form.Group className="mb-3">
                     <Form.Label>First Name</Form.Label>
@@ -101,9 +107,25 @@ function CreateCustomer () {
                 </Form>
                 <br></br>
                 <Link to="/customers">
-                <Button variant="outline-success">Back to Customers</Button>
+                <Button variant="success">Back to Customers</Button>
                 </Link>
+                <br></br>
+                <br></br>
+
               </Container>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+        </div>
     )
 }
 
