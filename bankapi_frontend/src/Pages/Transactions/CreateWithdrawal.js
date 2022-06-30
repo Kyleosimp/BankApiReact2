@@ -62,7 +62,12 @@ function CreateWithdrawal () {
 
 
     return (
-              <Container>
+        <div className="container">
+        <br />
+          <div className="row">
+          <div class="p-3 mb-2 bg-info text-white">
+            <h2 className="text-center">Make A Withdrawal</h2>
+              <div className="card-body">
                 <Form onSubmit={(e)=> submit(e)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Type</Form.Label>
@@ -100,9 +105,12 @@ function CreateWithdrawal () {
                 </Form>
                 <br></br>
                 <Link to="/transactions">
-                <Button variant="outline-success">View Transactions</Button>
+                <Button variant="warning">View Transactions</Button>
                 </Link>
-              </Container>
+              </div>
+              </div>
+              </div>
+              </div>
     )
 }
 
