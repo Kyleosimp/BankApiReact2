@@ -15,6 +15,7 @@ import CreateDeposit from './Pages/Transactions/CreateDeposit';
 import CreateBill from './Pages/Bills/CreateBill';
 import DisplayBillsComponent from './Pages/Bills/ListBills';
 import DisplayLoanRequest from './Pages/LoanRequest/DisplayLoanRequest.js';
+import ViewCustomer from './Pages/Customers/ViewCustomer';
 
 
 
@@ -39,7 +40,7 @@ function App() {
         <Route path='/accounts/bill/:id' element={<CreateBill/>}></Route>
         <Route path='/ListBills'element={<DisplayBillsComponent/>}></Route>
         <Route path="/loanrequests" element={<DisplayLoanRequest/>}></Route>
-
+        <Route path="/customers/view/:id" element={<ViewCustomer/>}></Route>
 
         <Route path="/*" element={<Home/>}></Route>
       </Routes>

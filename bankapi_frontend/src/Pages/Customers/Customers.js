@@ -51,6 +51,9 @@ class Customers extends Component {
                   <Link to={`/customers/edit/${customer.id}`}>
                   <Button variant="primary">Update</Button>
                   </Link>
+                  <Link to={`/customers/view/${customer.id}`}>
+                  <Button variant="primary">View</Button>
+                  </Link>
                   <Link to={`/accounts/customer/${customer.id}`}>
                   <Button variant="primary">Create Account</Button>
                   </Link>
