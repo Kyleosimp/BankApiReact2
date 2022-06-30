@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import { Form, Button} from "react-bootstrap";
 import {Link} from "react-router-dom"
+import "./loan.css"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -57,33 +58,59 @@ function DisplayLoan () {
    
 
     return (
+      <div>
+        <div>
+          <h1 class="title_loan">Elite 11 <br></br> Personal Loans</h1>
+        </div>
 
-        <Container>
-            <Form onSubmit={(e)=> submit(e)}>
-            <Form.Group className="mb-3" controlId="formBalance">
-                <Form.Label>Balance</Form.Label>
-                <Form.Control onChange={(e)=>handle(e)} id="balance" type="balance" value={data.balance} placeholder="Enter balance" />
-            </Form.Group>
+        <div>
+           <p class="message">
+            Here at Elite 11 banking, as long as you have money in your account and reward points..we can find an offer for you. 
+            <br></br>That's right, no credit check! See what you may qualify for down below.
+            </p>
+        </div>
 
-            <Form.Group className="mb-3" controlId="formRewards">
-                 <Form.Label>Rewards</Form.Label>
-                <Form.Control onChange={(e)=>handle(e)} id="rewards" type="rewards" value={data.rewards} placeholder="Enter rewards" />
-             </Form.Group>
-            <Button variant="primary" type="submit">
-             Submit
-            </Button>
+        <div class="form">
+          <Container>
+            <Form onSubmit={(e) => submit(e)}>
+              <Form.Group className="mb-3" controlId="formBalance">
+                <Form.Label class="balance">Account Balance</Form.Label>
+                <Form.Control
+                  onChange={(e) => handle(e)}
+                  id="balance"
+                  type="balance"
+                  value={data.balance}
+                  placeholder="Enter balance"
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formRewards">
+                <Form.Label class="rewards">Reward Points</Form.Label>
+                <Form.Control
+                  onChange={(e) => handle(e)}
+                  id="rewards"
+                  type="rewards"
+                  value={data.rewards}
+                  placeholder="Enter rewards"
+                />
+              </Form.Group>
+              <br></br>
+              <br></br>
+              <br></br>
+              <Button id="submit_loan" variant="primary" type="submit">
+                Submit
+              </Button>
             </Form>
-            <br>
-            </br>
-            <Link to="/home">
-                <Button  variant="outline-success">Return to Home</Button>
+            <br></br>
+            <Link to="/home" class="home">
+              <Button variant="outline-success">Return to Home</Button>
             </Link>
-           
-            <Card body>{result}</Card>
-           
-        </Container>
-
-    )
+            
+            <Card body class="card">{result}</Card>
+          </Container>
+        </div>
+      </div>
+    );
 
     
         

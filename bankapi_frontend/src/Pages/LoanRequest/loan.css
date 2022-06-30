@@ -1,0 +1,45 @@
+.form{
+    position: relative;
+    top: 50px;
+
+}
+
+.home{
+    position: relative;
+    top: 150px;
+}
+
+.title_loan{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.balance{
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.rewards{
+    margin-bottom: 10px;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.message{
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 40px;
+    
+}
+
+.card{
+    position: relative;
+   bottom: 150px;
+   left: 0px;
+   
+}
+
+#submit_loan{
+    position: relative;
+    top: 30px;
+}
