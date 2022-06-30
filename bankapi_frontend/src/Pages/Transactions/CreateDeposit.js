@@ -69,7 +69,7 @@ function CreateDeposit () {
         <div className="container">
         <br />
           <div className="row">
-          <div class="p-3 mb-2 bg-info text-white">
+          <div class="p-3 mb-2 bg-success text-white">
             <h2 className="text-center">Make A Deposit</h2>
               <div className="card-body">
                 <Form onSubmit={(e)=> submit(e)}>
@@ -108,7 +108,7 @@ function CreateDeposit () {
 
 
 
-                <Button variant="success" type="submit">
+                <Button variant="primary" type="submit">
                     Submit
                 </Button>
                 </Form>
@@ -116,6 +116,7 @@ function CreateDeposit () {
                 <Link to="/transactions">
                 <Button variant="warning">View Transactions</Button>
                 </Link>
+                
                 </div>
                 </div>
                 </div>

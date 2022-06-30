@@ -65,7 +65,7 @@ function CreateWithdrawal () {
         <div className="container">
         <br />
           <div className="row">
-          <div class="p-3 mb-2 bg-info text-white">
+          <div class="p-3 mb-2 bg-success text-white">
             <h2 className="text-center">Make A Withdrawal</h2>
               <div className="card-body">
                 <Form onSubmit={(e)=> submit(e)}>
@@ -99,7 +99,7 @@ function CreateWithdrawal () {
 
 
 
-                <Button variant="success" type="submit">
+                <Button variant="primary" type="submit">
                     Submit
                 </Button>
                 </Form>
