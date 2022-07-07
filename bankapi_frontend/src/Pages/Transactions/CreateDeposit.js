@@ -5,6 +5,8 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./Transactions.css";
 import {NavigationBar} from '../Components/NavigationBar';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 function CreateDeposit () {
@@ -85,7 +87,13 @@ function CreateDeposit () {
 
                  <Form.Group className="mb-3">
                      <Form.Label>Transaction Date</Form.Label>
-                     <Form.Control onChange={(e)=>handle(e)} id="transaction_date" value={data.transaction_date}  placeholder="Enter Date" />
+                     {/* <Form.Control onChange={(e)=>handle(e)} id="transaction_date" value={data.transaction_date}  placeholder="Enter Date" /> */}
+                     <Form.Control
+                        type="date"
+                        id="transaction_date"
+                        value={data.transaction_date}
+                        onChange={(e)=>handle(e)}
+                        placeholder="Enter Date" />
                  </Form.Group>
 
                  {/* <Form.Group className="mb-3">
