@@ -5,7 +5,19 @@
 .background{
     background-color: darkgreen;
 }
-h1{
+.title{
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     color: darkgreen;
+
+}
+.withdrawalAmount{
+    color: red;
+}
+.depositAmount{
+    color:rgb(25, 185, 25);
+}
+.billAmount{
+    color: red;
 }
