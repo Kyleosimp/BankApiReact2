@@ -4,7 +4,7 @@ import Axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { NavigationBar } from '../Components/NavigationBar';
+import NavigationBar from '../Components/NavigationBar';
 import "./Bill.css";
 
 

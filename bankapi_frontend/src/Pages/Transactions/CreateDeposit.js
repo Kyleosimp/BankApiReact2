@@ -4,9 +4,10 @@ import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./Transactions.css";
-import {NavigationBar} from '../Components/NavigationBar';
+import NavigationBar from '../Components/NavigationBar';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+
 
 
 function CreateDeposit () {

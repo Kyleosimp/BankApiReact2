@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
-import { NavigationBar } from '../Components/NavigationBar';
+import  NavigationBar  from '../Components/NavigationBar';
 import "./customersstyles.css";
 
 
@@ -125,15 +125,10 @@ function UpdateCustomer () {
               <Form.Control onChange={(e)=>handleAddress(e)} id="zip" value={data.address[0].zip} type="zip" placeholder="Enter zip code" />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button variant="success" type="submit">
               Submit
           </Button>
           </Form>
-          <br></br>
-          <Link to="/customers">
-          <Button variant="success">Back to Customers</Button>
-          </Link>
-          <br></br>
           <br></br>
         </Container>
         <br></br>

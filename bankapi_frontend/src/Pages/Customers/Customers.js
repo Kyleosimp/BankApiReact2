@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom"
 import { Table,Button, Container } from 'react-bootstrap';
 import Axios from 'axios';
-import { NavigationBar } from '../Components/NavigationBar';
+import NavigationBar from '../Components/NavigationBar';
 import "./customersstyles.css";
 class Customers extends Component {
     state = {
@@ -85,26 +85,12 @@ class Customers extends Component {
                     </tbody>
                     </Table>
                     <br></br>
-                    <Link to="/home">
-                    <Button variant="success">Home</Button>
-                    </Link>
-                    <br></br>
-                    <br></br>
                     <Link to="/newcustomer">
                     <Button variant="success">Create new customer</Button>
                     </Link>
                     <br></br>
                     <br></br>
-                    <Link to="/viewAccounts">
-                    <Button variant="success">View Accounts</Button>
-                    </Link>
-                    <br></br>
-                    <br></br>
                     </Container>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <br></br>
                     <br></br>
                     <br></br>

@@ -1,10 +1,10 @@
-
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Card } from "react-bootstrap";
 import { Container, Navbar, Button } from "react-bootstrap";
 import {Link} from "react-router-dom"
-import { NavigationBar } from "../Components/NavigationBar";
+import  NavigationBar  from "../Components/NavigationBar";
+import "./styles.css";
 
 //  import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from 'mdb-react-ui-kit';
 
