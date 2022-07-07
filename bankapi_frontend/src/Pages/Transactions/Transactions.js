@@ -48,7 +48,8 @@ class Transactions extends Component {
               <td> {bill.account.id}</td>
               <td>{bill.payment_date}</td>
               <td>{bill.payee}</td> 
-              <td>${bill.payment_amount}</td>
+              <td></td>
+              <td className='billAmount'>$-{bill.payment_amount}</td>
               <td></td>
               <td></td>
               <td>${bill.tmp_account_balance}</td>
@@ -61,9 +62,10 @@ class Transactions extends Component {
               <tr key={withdrawal.id}> 
                 <td>{withdrawal.account.id}</td> 
                 <td>{withdrawal.transactionDate}</td>
+                <td></td>
                 <td>{withdrawal.description}</td>
                 <td></td>
-                <td>${withdrawal.amount}</td>
+                <td className='withdrawalAmount'>$-{withdrawal.amount}</td>
                 <td></td>
                 <td>${withdrawal.tmp_account_balance}</td>
               </tr>  
@@ -74,10 +76,11 @@ class Transactions extends Component {
                 <tr key={deposit.id}> 
                   <td>{deposit.account.id}</td> 
                   <td>{deposit.transaction_date}</td>
+                  <td></td>
                   <td>{deposit.description}</td>
                   <td></td>
                   <td></td>
-                  <td>${deposit.amount}</td>
+                  <td className='depositAmount'>$+{deposit.amount}</td>
                   <td>${deposit.tmp_account_balance}</td>
                   
                   
@@ -91,19 +94,21 @@ class Transactions extends Component {
           <br></br>
           <br></br>
 
+          
         <Container className='transactionsTable'>
-        
-            <h1>TRANSACTIONS</h1>
-            <Table striped bordered>
+        <h3 className='title'>Transactions</h3>
+           
+            <Table>
                 <thead>
                     <tr>
                         <th>AccountID</th>
                         <th>Date</th>
+                        <th>Payee</th>
                         <th>Description</th>
                         <th>Bill</th>
                         <th>Withdrawal</th>
                         <th>Deposit</th>
-                        <th>Account_Balance</th>
+                        <th>Account Balance</th>
                     </tr>
                 </thead>
                 <tbody>
