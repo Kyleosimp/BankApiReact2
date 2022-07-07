@@ -113,9 +113,6 @@ function CreateWithdrawal () {
                  </Button>
                  </Form>
                  <br></br>
-                 <Link to="/transactions">
-                 <Button variant="success">View Transactions</Button>
-                 </Link>
             <br></br>
             <br></br>
 
@@ -132,6 +129,27 @@ function CreateWithdrawal () {
           <br></br>
           <br></br>
           <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          
     </div>
 
 
