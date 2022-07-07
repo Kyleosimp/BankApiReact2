@@ -71,9 +71,15 @@ class ListBills extends Component{
                     </tbody>
                 </Table>
                 <br></br>
-                <Link to="/home">   
-                <Button variant="outline-success">Home</Button>
-                </Link>
+                <Link to="/home">
+                <Button variant="primary">Return home</Button>  
+            </Link>
+            <Link to="/Transactions">
+                <Button variant="primary">Return to Transactions</Button>
+            </Link>
+            <Link to="/Accounts">
+                <Button variant="primary">Return to Accounts</Button>
+            </Link>
 
                 <br></br>
                 <br></br>
