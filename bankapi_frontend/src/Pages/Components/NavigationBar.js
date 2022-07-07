@@ -154,7 +154,7 @@ export default function NavigationBar() {
   return (
     <Navbar collapseOnSelect expand="lg"  bg="light" variant="light">
     <Container>
-    <Navbar.Brand href="#home">Elite 11 Bank</Navbar.Brand>
+    <Navbar.Brand>Elite 11 Bank</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link onClick={handleClickHome} style={{color: (homeIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (homeIsActive)=== 'true' ? 'bold' : 'normal' }} as={Link} to='/home'>Home</Nav.Link>
       <Nav.Link onClick={handleClickCustomer} style={{color: (customersIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (customersIsActive)=== 'true' ? 'bold' : 'normal'}} as={Link} to="/customers">Customers</Nav.Link>
