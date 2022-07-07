@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
+import "./Transactions.css";
 
 
 function CreateWithdrawal () {
@@ -14,9 +15,9 @@ function CreateWithdrawal () {
   //  const params = useParams()
 
     const emptyData = {
-        type: "",
+        type: "Withdrawal",
         transactionDate: "",
-        status: "",
+        status: "Completed",
         medium: "",
         amount: "",
         description: "",
@@ -24,9 +25,9 @@ function CreateWithdrawal () {
         }
 
     const [data, setData] = useState({
-        type: "",
+        type: "Withdrawal",
         transactionDate: "",
-        status: "",
+        status: "Completed",
         medium: "",
         amount: "",
         description:"",
@@ -62,55 +63,154 @@ function CreateWithdrawal () {
 
 
     return (
-        <div className="container">
-        <br />
-          <div className="row">
-          <div class="p-3 mb-2 bg-success text-white">
-            <h2 className="text-center">Make A Withdrawal</h2>
-              <div className="card-body">
-                <Form onSubmit={(e)=> submit(e)}>
-                <Form.Group className="mb-3">
-                    <Form.Label>Type</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  placeholder="Enter Type" />
-                </Form.Group>
 
-                <Form.Group className="mb-3">
-                    <Form.Label>Transaction Date</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="transactionDate" value={data.transactionDate}  placeholder="Enter Date" />
-                </Form.Group>
+        <div className='background'>
+        <br></br>
+          <Container className="transactionsTable">
+          <br></br>
+            <h3 className="myTitle">Make A Withdrawal</h3>
+            <br></br>
+                     <Form onSubmit={(e)=> submit(e)}>
+                 <Form.Group className="mb-3">
+                     <Form.Label>Type</Form.Label>
+                     <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  disabled />
+                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    <Form.Label>Status</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="status" value={data.status} placeholder="Status" />
-                </Form.Group>
+                 <Form.Group className="mb-3">
+                     <Form.Label>Transaction Date</Form.Label>
+                     <Form.Control onChange={(e)=>handle(e)} id="transactionDate" value={data.transactionDate}  placeholder="Enter Date" />
+                 </Form.Group>
 
-                <Form.Group className="mb-3" >
-                    <Form.Label>Medium</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" />
-                </Form.Group>
-                <Form.Group className="mb-3" >
-                    <Form.Label>Amount</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="amount" value={data.amount} placeholder="Enter Amount" />
-                </Form.Group>
-                <Form.Group className="mb-3" >
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control onChange={(e)=>handle(e)} id="description" value={data.description} placeholder="Type Description" />
-                </Form.Group>
+                 {/* <Form.Group className="mb-3">
+        //             <Form.Label>Status</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="status" value={data.status} placeholder="Status" />
+        //         </Form.Group> */}
+
+                 <Form.Group className="mb-3" >
+                     <Form.Label>Medium</Form.Label>
+                     <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" />
+                 </Form.Group>
+                 <Form.Group className="mb-3" >
+                     <Form.Label>Amount</Form.Label>
+                     <Form.Control onChange={(e)=>handle(e)} id="amount" value={data.amount} placeholder="Enter Amount" />
+                 </Form.Group>
+                 <Form.Group className="mb-3" >
+                     <Form.Label>Description</Form.Label>
+                     <Form.Control onChange={(e)=>handle(e)} id="description" value={data.description} placeholder="Type Description" />
+                 </Form.Group>
+
+
+                 <Button variant="primary" type="submit">
+                     Submit
+                 </Button>
+                 </Form>
+                 <br></br>
+                 <Link to="/transactions">
+                 <Button variant="success">View Transactions</Button>
+                 </Link>
+            <br></br>
+            <br></br>
+
+          </Container>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+    </div>
 
 
 
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-                </Form>
-                <br></br>
-                <Link to="/transactions">
-                <Button variant="warning">View Transactions</Button>
-                </Link>
-              </div>
-              </div>
-              </div>
-              </div>
+
+
+        // <div className="container">
+        // <br />
+        //   <div className="row">
+        //   <div class="p-3 mb-2 bg-success text-white">
+        //     <h2 className="text-center">Make A Withdrawal</h2>
+        //       <div className="card-body">
+        //         <Form onSubmit={(e)=> submit(e)}>
+        //         <Form.Group className="mb-3">
+        //             <Form.Label>Type</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  disabled />
+        //         </Form.Group>
+
+        //         <Form.Group className="mb-3">
+        //             <Form.Label>Transaction Date</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="transactionDate" value={data.transactionDate}  placeholder="Enter Date" />
+        //         </Form.Group>
+
+        //         {/* <Form.Group className="mb-3">
+        //             <Form.Label>Status</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="status" value={data.status} placeholder="Status" />
+        //         </Form.Group> */}
+
+        //         <Form.Group className="mb-3" >
+        //             <Form.Label>Medium</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" />
+        //         </Form.Group>
+        //         <Form.Group className="mb-3" >
+        //             <Form.Label>Amount</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="amount" value={data.amount} placeholder="Enter Amount" />
+        //         </Form.Group>
+        //         <Form.Group className="mb-3" >
+        //             <Form.Label>Description</Form.Label>
+        //             <Form.Control onChange={(e)=>handle(e)} id="description" value={data.description} placeholder="Type Description" />
+        //         </Form.Group>
+
+
+
+        //         <Button variant="primary" type="submit">
+        //             Submit
+        //         </Button>
+        //         </Form>
+        //         <br></br>
+        //         <Link to="/transactions">
+        //         <Button variant="warning">View Transactions</Button>
+        //         </Link>
+        //       </div>
+        //       </div>
+        //       </div>
+        //       <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>                
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //             <br></br>
+        //       </div>
     )
 }
 
