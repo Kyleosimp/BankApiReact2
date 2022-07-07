@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
 import "./styles.css";
->>>>>>> master
 import "bootstrap/dist/css/bootstrap.css";
 import { Card } from "react-bootstrap";
 import { Container, Navbar, Button } from "react-bootstrap";

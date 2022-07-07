@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import axios from 'axios';
 import "./accountstyle.css";
-import { NavigationBar } from '../Components/NavigationBar';
+import  NavigationBar  from '../Components/NavigationBar';
 
 
 
