@@ -1,8 +1,8 @@
-import "./styles.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Container, Navbar, Button } from "react-bootstrap";
 import {Link} from "react-router-dom"
-import { NavigationBar } from "../Components/NavigationBar";
+import  NavigationBar  from "../Components/NavigationBar";
+import "./styles.css";
 
 export default function Home() {
   return (

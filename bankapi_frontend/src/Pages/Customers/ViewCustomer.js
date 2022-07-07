@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import axios from 'axios';
-import { NavigationBar } from '../Components/NavigationBar';
+import  NavigationBar  from '../Components/NavigationBar';
 import "./customersstyles.css";
 
 
@@ -89,11 +89,6 @@ function ViewCustomer () {
           </Form.Group>
             <br></br>
           </Form>
-          <Link to="/customers">
-                <Button variant="success">Back to Customers</Button>
-            </Link>
-                <br></br>
-                <br></br>
         </Container>
         <br></br>
                 <br></br>

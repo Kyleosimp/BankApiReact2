@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import { Form, Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import { NavigationBar } from '../Components/NavigationBar';
+import NavigationBar from '../Components/NavigationBar';
 import "./loan.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';

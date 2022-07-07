@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Table,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./Transactions.css";
-import {NavigationBar} from '../Components/NavigationBar';
+import NavigationBar from '../Components/NavigationBar';
 
 class Transactions extends Component {
   state = {
