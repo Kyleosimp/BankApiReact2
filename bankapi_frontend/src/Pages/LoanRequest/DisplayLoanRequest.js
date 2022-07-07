@@ -2,8 +2,9 @@ import Axios  from "axios";
 import React, { useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import { Form, Button} from "react-bootstrap";
-import {Link} from "react-router-dom"
-import "./loan.css"
+import {Link} from "react-router-dom";
+import { NavigationBar } from '../Components/NavigationBar';
+import "./loan.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -59,6 +60,7 @@ function DisplayLoan () {
 
     return (
       <div class="loan_background">
+        <NavigationBar/>
         <div >
           <h1 class="title_loan">Elite 11 <br></br> Personal Loans</h1>
         </div>
