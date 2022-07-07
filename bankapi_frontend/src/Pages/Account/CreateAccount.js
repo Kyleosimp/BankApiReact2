@@ -45,7 +45,7 @@ function CreateAccount () {
     function submit(e){
         e.preventDefault();
         Axios.post(API_URL, {
-
+           
             type: data.type,
             nickname: data.nickname,
             rewards: data.rewards,
