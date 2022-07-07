@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import axios from 'axios';
+import { NavigationBar } from '../Components/NavigationBar';
 import "./customersstyles.css";
 
 
@@ -45,6 +46,7 @@ function ViewCustomer () {
 
     return (
         <div className='myBackground'>
+            <NavigationBar/>
             <br></br>
         <Container className="myTable">
             <br></br>
