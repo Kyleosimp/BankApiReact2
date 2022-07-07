@@ -1,22 +1,27 @@
 .form{
     position: relative;
-    top: 50px;
+    top: 150px;
+    left: 380px;
+    background-color: beige;
+    width: 50%;
 
 }
 
 .home{
     position: relative;
-    top: 150px;
+    top: 100px;
 }
 
 .title_loan{
     padding-left: 50px;
     padding-top: 10px;
+    color: beige;
 }
 
 .balance{
     margin-bottom: 10px;
     font-size: large;
+    padding-top: 50px;
 }
 
 .rewards{
@@ -42,4 +47,32 @@
 #submit_loan{
     position: relative;
     top: 30px;
+}
+
+#card_body{
+    position: relative;
+    top: 80px; 
+    background-color: darkgreen;
+}
+
+.card_text{
+    text-align: center;
+    font-size: larger;
+    color: beige;
+}
+
+.title_loan{
+    text-align: center;
+    position: relative;
+    top:10px;
+    margin-top: 30px;
+}
+
+.loan_background{
+    background-color: darkgreen;
+}
+
+.loan_home{
+    position: relative;
+    top: 20px;
 }

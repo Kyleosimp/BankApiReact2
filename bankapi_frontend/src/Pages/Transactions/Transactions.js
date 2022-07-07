@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Table,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import "./Transactions.css";
+import {NavigationBar} from '../Components/NavigationBar';
 
 class Transactions extends Component {
   state = {
@@ -83,7 +85,14 @@ class Transactions extends Component {
             )
             })
       return (
-        <Container>
+        <div className='background'>
+          <NavigationBar/>
+          <br></br>
+          <br></br>
+          <br></br>
+
+        <Container className='transactionsTable'>
+        
             <h1>TRANSACTIONS</h1>
             <Table striped bordered>
                 <thead>
@@ -106,12 +115,46 @@ class Transactions extends Component {
             
             <br></br>
             <Link to="/home">
-            <Button variant="outline-success">Home</Button>
+            <Button variant="outline-success" className='homeButton'>Home</Button>
             </Link>
             {/* <Link to="/accounts/withdrawal/:id">
             <Button variant="outline-success">Create Withdrawal</Button>
             </Link> */}
         </Container>
+        <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>                
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+        </div>
       )
     }
   }

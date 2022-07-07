@@ -2,8 +2,9 @@ import Axios  from "axios";
 import React, { useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import { Form, Button} from "react-bootstrap";
-import {Link} from "react-router-dom"
-import "./loan.css"
+import {Link} from "react-router-dom";
+import { NavigationBar } from '../Components/NavigationBar';
+import "./loan.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -58,16 +59,17 @@ function DisplayLoan () {
    
 
     return (
-      <div>
-        <div>
+      <div class="loan_background">
+        <NavigationBar/>
+        <div >
           <h1 class="title_loan">Elite 11 <br></br> Personal Loans</h1>
         </div>
 
-        <div>
-           <p class="message">
+        <div >
+           <Card id="card_body" ><Card.Body class="card_text">
             Here at Elite 11 banking, as long as you have money in your account and reward points..we can find an offer for you. 
             <br></br>That's right, no credit check! See what you may qualify for down below.
-            </p>
+            </Card.Body></Card>
         </div>
 
         <div class="form">
@@ -97,19 +99,30 @@ function DisplayLoan () {
               <br></br>
               <br></br>
               <br></br>
-              <Button id="submit_loan" variant="primary" type="submit">
+              <Button id="submit_loan" variant="success" type="submit">
                 Submit
               </Button>
             </Form>
             <br></br>
-            <Link to="/home" class="home">
-              <Button variant="outline-success">Return to Home</Button>
+            <Link to="/home" class="loan_home">
+              <Button variant="success">Return to Home</Button>
             </Link>
             
             <Card body class="card">{result}</Card>
           </Container>
         </div>
+        <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
       </div>
+      
     );
 
     
