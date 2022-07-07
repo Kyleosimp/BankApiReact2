@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import axios from 'axios';
 import "./accountstyle.css";
+import { NavigationBar } from '../Components/NavigationBar';
 
 
 
@@ -75,7 +76,8 @@ function UpdateAccount () {
 
     return (
         <div className='myBackground'>
-        <br></br>
+            <NavigationBar/>
+            <br></br>
               <Container className="myTable">
               <br></br>
             <h3 className="myTitle">Update Account</h3>

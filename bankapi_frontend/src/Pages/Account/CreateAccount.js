@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./accountstyle.css";
+import { NavigationBar } from '../Components/NavigationBar';
 
 
 
@@ -62,6 +63,7 @@ function CreateAccount () {
 
     return (
               <Container>
+                 <NavigationBar/>
                 <Form onSubmit={(e)=> submit(e)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Type</Form.Label>
