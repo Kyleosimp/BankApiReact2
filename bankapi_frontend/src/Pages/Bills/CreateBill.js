@@ -77,8 +77,9 @@ function CreateBill(){
     }
     
     return (
-        <div className="container">
+        <div>
             <NavigationBar />
+        <div className="container">
             <br />
             <div className="row">
                 <div className="">
@@ -195,6 +196,7 @@ function CreateBill(){
         </Container>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
