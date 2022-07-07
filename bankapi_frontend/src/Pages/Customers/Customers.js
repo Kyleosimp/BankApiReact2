@@ -5,7 +5,6 @@ import { Table,Button, Container } from 'react-bootstrap';
 import Axios from 'axios';
 import { NavigationBar } from '../Components/NavigationBar';
 import "./customersstyles.css";
-
 class Customers extends Component {
     state = {
         data : []
