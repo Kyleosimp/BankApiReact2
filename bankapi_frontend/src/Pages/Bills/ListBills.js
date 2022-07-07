@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom"
 import { Table,Button, Container } from 'react-bootstrap';
 import { Axios } from 'axios';
+import { NavigationBar } from '../Components/NavigationBar';
 
 
 
@@ -51,7 +52,13 @@ class ListBills extends Component{
                 </tr>
             );
          })
-        return(
+         return (
+            <div className="container">
+                <NavigationBar />
+                <br />
+                <div className="row">
+                    <div className="">
+                        <h2 className="text-center">Create Bill</h2>
             <Container fluid>
                 <Table striped bordered hover>
                     <thead>
@@ -84,6 +91,9 @@ class ListBills extends Component{
                 <br></br>
                 <br></br>
             </Container>
+            </div>
+            </div>
+            </div>
         );
             
     }
