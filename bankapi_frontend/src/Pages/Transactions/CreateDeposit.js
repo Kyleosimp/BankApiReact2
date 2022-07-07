@@ -96,8 +96,11 @@ function CreateDeposit () {
 
                  <Form.Group className="mb-3" >
                      <Form.Label>Medium</Form.Label>
-                     <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" />
-                    
+                     {/* <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" /> */}
+                     <Form.Select onChange={(e)=>handle(e)} id="medium" value={data.medium}>
+                        <option value="1">Balance</option>
+                        <option value="2">Rewards</option>
+                     </Form.Select>
                  </Form.Group>
                  <Form.Group className="mb-3" >
                      <Form.Label>Amount</Form.Label>
