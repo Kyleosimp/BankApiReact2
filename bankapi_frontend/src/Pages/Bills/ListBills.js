@@ -53,13 +53,16 @@ class ListBills extends Component{
             );
          })
          return (
-            <div className="container">
-                <NavigationBar />
-                <br />
-                <div className="row">
-                    <div className="">
-                        <h2 className="text-center">Create Bill</h2>
-            <Container fluid>
+            <div>
+                <NavigationBar/>
+            <div className='background'>
+                <br/>
+                <br/>
+                <br/>
+            <Container className="myTable">
+                <br/>
+                <h3 className='title'>Bills</h3>
+                <br/>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -79,19 +82,25 @@ class ListBills extends Component{
                 </Table>
                 <br></br>
                 <Link to="/home">
-                <Button variant="primary">Return home</Button>  
+                <Button variant="outline-success">Return home</Button>  
             </Link>
-            <Link to="/Transactions">
-                <Button variant="primary">Return to Transactions</Button>
-            </Link>
-            <Link to="/Accounts">
-                <Button variant="primary">Return to Accounts</Button>
-            </Link>
-
                 <br></br>
                 <br></br>
             </Container>
-            </div>
+            <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
             </div>
             </div>
         );

@@ -1,4 +1,4 @@
-.shadow {
+/* /* .shadow {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,7 +13,8 @@
  
     display: flex;
     justify-content: center;
-    background-image: url(https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-color: black;
+     background-image: url(https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); 
   }
   
   .content {
@@ -25,4 +26,51 @@
     color: black;
     text-align: center;
   }
+   */
+
+
+   * {
+      box-sizing: border-box;
+      margin: 0;
+      padding:0;
+      font-family: 'Encode Sans Expanded', sans-serif;
+      
+    }
+
+    .card{
+      text-align: center;
+      text-size-adjust: 50px;
+      padding-top: 10px;
+    }
+
+    .titleBank{
+ 
+        padding-left: 50px;
+        padding-top: 10px;
+    
+    
+    
+    }
+
+    
+
   
+  .bgimage {
+    width:100%;
+    height:500px;
+    background: url('https://dashdevs.com/images/cw-1498_1410.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+  .bgimage h5 {
+    color:white;
+    text-shadow:2px 2px #333;
+  }
+
+
+
+    /* #card_body{
+      text-align
+    } */

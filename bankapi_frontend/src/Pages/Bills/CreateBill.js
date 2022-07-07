@@ -5,6 +5,8 @@ import { Link, useParams } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import NavigationBar from '../Components/NavigationBar';
+import "./Bill.css";
+
 
 
 function CreateBill(){
@@ -78,13 +80,15 @@ function CreateBill(){
     
     return (
         <div>
-            <NavigationBar />
-        <div className="container">
-            <br />
-            <div className="row">
-                <div className="">
-                    <h2 className="text-center">Create Bill</h2>
-        <Container>
+            <NavigationBar/>
+        <div className='background'>
+            <br/>
+            <br/>
+            <br/>
+        <Container className='myTable'>
+            <br></br>
+            <h3 className='title'>Bill Details</h3>
+            <br></br>
             <Form onSubmit={(e)=> submit(e)}>
             <Form.Group className="mb-3">
                 <Form.Label>Status</Form.Label>
@@ -176,28 +180,26 @@ function CreateBill(){
                 <Form.Label>Payment Amount</Form.Label>
                 <Form.Control onChange={(e)=>handle(e)} id="payment_amount" value={data.payment_amount}  placeholder="Enter Payment Amount" />
             </Form.Group>
-
-            <Button variant="primary" type="submit">
+            <Button variant="outline-success" type="submit">
                 Submit
             </Button>
-            <Link to="/home">
-                <Button variant="primary">Return home</Button>  
-            </Link>
-            <Link to="/ListBills">
-                <Button variant="primary">View All Bills</Button>
-            </Link>
-            <Link to="/Transactions">
-                <Button variant="primary">Return to Transactions</Button>
-            </Link>
-            <Link to="/Accounts">
-                <Button variant="primary">Return to Accounts</Button>
-            </Link>
             </Form>
+            <br></br>
         </Container>
+        <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
                 </div>
             </div>
-        </div>
-        </div>
     )
 }
 

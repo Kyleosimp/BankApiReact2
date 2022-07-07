@@ -5,6 +5,9 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./Transactions.css";
 import NavigationBar from '../Components/NavigationBar';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 
 function CreateDeposit () {
@@ -85,7 +88,13 @@ function CreateDeposit () {
 
                  <Form.Group className="mb-3">
                      <Form.Label>Transaction Date</Form.Label>
-                     <Form.Control onChange={(e)=>handle(e)} id="transaction_date" value={data.transaction_date}  placeholder="Enter Date" />
+                     {/* <Form.Control onChange={(e)=>handle(e)} id="transaction_date" value={data.transaction_date}  placeholder="Enter Date" /> */}
+                     <Form.Control
+                        type="date"
+                        id="transaction_date"
+                        value={data.transaction_date}
+                        onChange={(e)=>handle(e)}
+                        placeholder="Enter Date" />
                  </Form.Group>
 
                  {/* <Form.Group className="mb-3">
@@ -123,9 +132,6 @@ function CreateDeposit () {
                  </Button>
                  </Form>
                  <br></br>
-                 <Link to="/transactions">
-                 <Button variant="success">View Transactions</Button>
-                 </Link>
             <br></br>
             <br></br>
 
@@ -142,64 +148,28 @@ function CreateDeposit () {
           <br></br>
           <br></br>
           <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
     </div>
               
-        // <div className="container">
-        // <br />
-        //   <div className="row">
-        //   <div class="p-3 mb-2 bg-success text-white">
-        //     <h2 className="text-center">Make A Deposit</h2>
-        //       <div className="card-body">
-        //         <Form onSubmit={(e)=> submit(e)}>
-        //         <Form.Group className="mb-3">
-        //             <Form.Label>Type</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  disabled />
-        //         </Form.Group>
 
-        //         <Form.Group className="mb-3">
-        //             <Form.Label>Transaction Date</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="transaction_date" value={data.transaction_date}  placeholder="Enter Date" />
-        //         </Form.Group>
-
-        //         {/* <Form.Group className="mb-3">
-        //             <Form.Label>Status</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="status" value={data.status} placeholder="Status" />
-        //         </Form.Group> */}
-
-        //         <Form.Group className="mb-3">
-        //             <Form.Label>Payee Id</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="payee_id" value={data.payee_id} placeholder="Id" />
-        //         </Form.Group>
-
-        //         <Form.Group className="mb-3" >
-        //             <Form.Label>Medium</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" />
-                    
-        //         </Form.Group>
-        //         <Form.Group className="mb-3" >
-        //             <Form.Label>Amount</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="amount" value={data.amount} placeholder="Enter Amount" />
-        //         </Form.Group>
-        //         <Form.Group className="mb-3" >
-        //             <Form.Label>Description</Form.Label>
-        //             <Form.Control onChange={(e)=>handle(e)} id="description" value={data.description} placeholder="Type Description" />
-        //         </Form.Group>
-
-
-
-        //         <Button variant="primary" type="submit">
-        //             Submit
-        //         </Button>
-        //         </Form>
-        //         <br></br>
-        //         <Link to="/transactions">
-        //         <Button variant="warning">View Transactions</Button>
-        //         </Link>
-                
-        //         </div>
-        //         </div>
-        //         </div>
-        //         </div>
                 
               
     )

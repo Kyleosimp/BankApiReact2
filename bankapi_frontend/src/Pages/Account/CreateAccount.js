@@ -4,6 +4,9 @@ import {Link, useParams} from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
+import "./accountstyle.css";
+import { NavigationBar } from '../Components/NavigationBar';
+
 
 
 function CreateAccount () {
@@ -42,7 +45,7 @@ function CreateAccount () {
     function submit(e){
         e.preventDefault();
         Axios.post(API_URL, {
-
+           
             type: data.type,
             nickname: data.nickname,
             rewards: data.rewards,
@@ -60,6 +63,7 @@ function CreateAccount () {
 
     return (
               <Container>
+                 <NavigationBar/>
                 <Form onSubmit={(e)=> submit(e)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Type</Form.Label>

@@ -5,6 +5,8 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./Transactions.css";
 import NavigationBar from '../Components/NavigationBar';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 function CreateWithdrawal () {
 
@@ -81,7 +83,13 @@ function CreateWithdrawal () {
 
                  <Form.Group className="mb-3">
                      <Form.Label>Transaction Date</Form.Label>
-                     <Form.Control onChange={(e)=>handle(e)} id="transactionDate" value={data.transactionDate}  placeholder="Enter Date" />
+                     {/* <Form.Control onChange={(e)=>handle(e)} id="transactionDate" value={data.transactionDate}  placeholder="Enter Date" /> */}
+                     <Form.Control
+                        type="date"
+                        onChange={(e)=>handle(e)}
+                        id="transactionDate"
+                        value={data.transactionDate}
+                        placeholder="Enter Date" />
                  </Form.Group>
 
                  {/* <Form.Group className="mb-3">
@@ -113,9 +121,6 @@ function CreateWithdrawal () {
                  </Button>
                  </Form>
                  <br></br>
-                 <Link to="/transactions">
-                 <Button variant="success">View Transactions</Button>
-                 </Link>
             <br></br>
             <br></br>
 
@@ -132,6 +137,27 @@ function CreateWithdrawal () {
           <br></br>
           <br></br>
           <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          
     </div>
 
 
