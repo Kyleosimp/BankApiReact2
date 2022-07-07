@@ -119,9 +119,6 @@ class Transactions extends Component {
             </Table>
             
             <br></br>
-            <Link to="/home">
-            <Button variant="outline-success" className='homeButton'>Home</Button>
-            </Link>
             {/* <Link to="/accounts/withdrawal/:id">
             <Button variant="outline-success">Create Withdrawal</Button>
             </Link> */}
