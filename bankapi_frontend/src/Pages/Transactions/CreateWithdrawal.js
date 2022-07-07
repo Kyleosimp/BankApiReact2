@@ -4,7 +4,7 @@ import {Link, useParams} from "react-router-dom"
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./Transactions.css";
-
+import {NavigationBar} from '../Components/NavigationBar';
 
 function CreateWithdrawal () {
 
@@ -65,7 +65,10 @@ function CreateWithdrawal () {
     return (
 
         <div className='background'>
-        <br></br>
+            <NavigationBar/>
+            <br></br>
+          <br></br>
+          <br></br>
           <Container className="transactionsTable">
           <br></br>
             <h3 className="myTitle">Make A Withdrawal</h3>
@@ -90,6 +93,7 @@ function CreateWithdrawal () {
                      <Form.Label>Medium</Form.Label>
                      {/* <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" /> */}
                      <Form.Select onChange={(e)=>handle(e)} id="medium" value={data.medium}>
+                     <option>--Please Select One--</option>
                         <option value="1">Balance</option>
                         <option value="2">Rewards</option>
                      </Form.Select>
