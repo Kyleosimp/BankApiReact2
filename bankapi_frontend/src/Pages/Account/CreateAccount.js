@@ -4,6 +4,8 @@ import {Link, useParams} from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
 import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
+import "./accountstyle.css";
+
 
 
 function CreateAccount () {

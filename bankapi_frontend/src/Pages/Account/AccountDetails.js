@@ -5,6 +5,9 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
 import axios from 'axios';
+import "./accountstyle.css";
+
+
 
 
 
@@ -72,7 +75,14 @@ function AccountDetails () {
 
 
     return (
-              <Container>
+        <div className='myBackground'>
+            <br></br>
+              <Container  className="myTable">
+
+              <br></br>
+            <h3 className="myTitle">View Account</h3>
+            <br></br>
+
                 <Form onSubmit={(e)=> submit(e)}>
                 <Form.Group className="mb-3">
                     <Form.Label>Type</Form.Label>
@@ -116,7 +126,21 @@ function AccountDetails () {
                     <Link to="/home">
                     <Button variant="outline-success">Home</Button>
                     </Link>
+                    <br></br>
+                <br></br>
               </Container>
+              <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+        </div>
     )
 }
 
