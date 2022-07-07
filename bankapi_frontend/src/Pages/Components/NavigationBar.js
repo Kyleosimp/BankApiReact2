@@ -156,12 +156,12 @@ export default function NavigationBar() {
     <Container>
     <Navbar.Brand href="#home">Elite 11 Bank</Navbar.Brand>
     <Nav className="me-auto">
-      <Nav.Link onClick={handleClickHome} style={{color: (homeIsActive)=== 'true' ? 'darkgreen' : 'black'}} as={Link} to='/home'>Home</Nav.Link>
-      <Nav.Link onClick={handleClickCustomer} style={{color: (customersIsActive)=== 'true' ? 'darkgreen' : 'black'}} as={Link} to="/customers">Customers</Nav.Link>
-      <Nav.Link onClick={handleClickAccount} style={{color: (accountsIsActive)=== 'true' ? 'darkgreen' : 'black'}} as={Link} to="/viewAccounts">Accounts</Nav.Link>
-      <Nav.Link onClick={handleClickTransaction} style={{color: (transactionsIsActive)=== 'true' ? 'darkgreen' : 'black'}} as={Link} to="/transactions">Transactions</Nav.Link>
-      <Nav.Link onClick={handleClickBill} style={{color: (billsIsActive)=== 'true' ? 'darkgreen' : 'black'}} as={Link} to="/ListBills">Bills</Nav.Link>
-      <Nav.Link onClick={handleClickLoanRequest} style={{color: (loanRequestsIsActive)=== 'true' ? 'darkgreen' : 'black'}} as={Link} to="/loanrequests">Loan Requests</Nav.Link>
+      <Nav.Link onClick={handleClickHome} style={{color: (homeIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (homeIsActive)=== 'true' ? 'bold' : 'normal' }} as={Link} to='/home'>Home</Nav.Link>
+      <Nav.Link onClick={handleClickCustomer} style={{color: (customersIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (customersIsActive)=== 'true' ? 'bold' : 'normal'}} as={Link} to="/customers">Customers</Nav.Link>
+      <Nav.Link onClick={handleClickAccount} style={{color: (accountsIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (accountsIsActive)=== 'true' ? 'bold' : 'normal'}} as={Link} to="/viewAccounts">Accounts</Nav.Link>
+      <Nav.Link onClick={handleClickTransaction} style={{color: (transactionsIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (transactionsIsActive)=== 'true' ? 'bold' : 'normal'}} as={Link} to="/transactions">Transactions</Nav.Link>
+      <Nav.Link onClick={handleClickBill} style={{color: (billsIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (billsIsActive)=== 'true' ? 'bold' : 'normal'}} as={Link} to="/ListBills">Bills</Nav.Link>
+      <Nav.Link onClick={handleClickLoanRequest} style={{color: (loanRequestsIsActive)=== 'true' ? 'darkgreen' : 'black', fontWeight: (loanRequestsIsActive)=== 'true' ? 'bold' : 'normal'}} as={Link} to="/loanrequests">Loan Requests</Nav.Link>
     </Nav>
     <br></br>
     <br></br>
