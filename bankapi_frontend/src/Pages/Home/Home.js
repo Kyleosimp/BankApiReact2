@@ -61,7 +61,7 @@ return (
   <div class="col">
     
     <div class="card"  style={{marginLeft:"20px"}}>
-      <img src="https://vyapaar.net/wp-content/uploads/2020/12/circular-vector-image.jpg" alt="a snow-capped mountain range"/>
+      <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972212765413488/john-removebg-preview.png" alt="a snow-capped mountain range"/>
       <div class="card-body">
         <h2 class="card-title">John Feil</h2>
         <p class="card-text">Back-End Developer </p>
@@ -70,7 +70,7 @@ return (
   </div>
   <div class="col">
     <div class="card">
-      <img src="https://lauckmclean.com/wp-content/uploads/2020/12/brad-480x480.jpg" alt="a snowy mountain with clouds behind it"/>
+      <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972214912888942/luis-removebg-preview.png" alt="a snowy mountain with clouds behind it"/>
       <div class="card-body">
         <h2 class="card-title">Luis Figueroa</h2>
         <p class="card-text">Back-End Developer</p>
@@ -79,7 +79,7 @@ return (
   </div>
   <div class="col">
     <div class="card">
-      <img src="https://avatars3.githubusercontent.com/u/771703?v=4" alt="a mountain range under a thin layer of clouds"/>
+      <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972213281300591/kyle-removebg-preview.png" alt="a mountain range under a thin layer of clouds"/>
       <div class="card-body">
         <h2 class="card-title">Kyle Simpson</h2>
         <p class="card-text">Back-End Developer</p>
@@ -93,7 +93,7 @@ return (
     <div class="row row-cols-3 g-3">
   <div class="col">
     <div class="card">
-      <img src="https://www.clipartkey.com/mpngs/m/94-943097_stockvader-predicted-adig-user-profile-image-png.png" alt="a snow-capped mountain range"/>
+      <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972215663656981/yev-removebg-preview.png" alt="a snow-capped mountain range"/>
       <div class="card-body">
         <h2 class="card-title">Yevgeny Carranza</h2>
         <p class="card-text">Back-End Developer</p>
@@ -102,7 +102,7 @@ return (
   </div>
   <div class="col">
     <div class="card">
-      <img src="https://uploads-ssl.webflow.com/602d05b9f62951430b8b24d4/607e44305dab6b1876bbc6bb_empty.jpg" alt="a snowy mountain with clouds behind it"/>
+      <img src="https://media.discordapp.net/attachments/952998643751845968/994972212316606544/aisha-removebg-preview.png?width=447&height=468" alt="a snowy mountain with clouds behind it"/>
       <div class="card-body">
         <h2 class="card-title">Aisha Mundy</h2>
         <p class="card-text">Back-End Developer</p>
@@ -111,7 +111,7 @@ return (
   </div>
   <div class="col">
     <div class="card">
-      <img src="https://jdi8hm826pc3m33dscjno1s-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/business.png" alt="a mountain range under a thin layer of clouds"/>
+      <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972215185526915/renne-removebg-preview.png" alt="a mountain range under a thin layer of clouds"/>
       <div class="card-body">
         <h2 class="card-title">Renne Adzadu</h2>
         <p class="card-text">Back-End Developer</p>
@@ -125,7 +125,7 @@ return (
 <div class="row row-cols-3 g-3">
   <div class="col">
     <div class="card">
-      <img src="https://www.shareicon.net/data/2016/09/15/829470_user_512x512.png" alt="a snow-capped mountain range"/>
+      <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972212534714459/emoni-removebg-preview.png" alt="a snow-capped mountain range"/>
       <div class="card-body">
         <h2 class="card-title">Emoni Saylor-Smallwood</h2>
         <p class="card-text">Front-End Developer  
