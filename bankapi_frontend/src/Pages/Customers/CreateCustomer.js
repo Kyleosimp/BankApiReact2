@@ -106,11 +106,14 @@ function CreateCustomer () {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
-                </Form>
-                <br></br>
                 <Link to="/customers">
-                <Button variant="success">Back to Customers</Button>
+                <Button style={{marginLeft:"20px"}} variant="success">Back to Customers</Button>
                 </Link>
+                </Form>
+               
+                {/* <Link to="/customers">
+                <Button variant="success">Back to Customers</Button>
+                </Link> */}
                 <br></br>
                 <br></br>
 

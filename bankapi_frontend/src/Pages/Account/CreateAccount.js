@@ -62,15 +62,28 @@ function CreateAccount () {
 
 
     return (
-              <Container>
+        <div className='myBackground' >
                  <NavigationBar/>
+                 <br></br>
+              <Container  className="myTable">
+            <br></br>
+            <h3 className="myTitle">Create Account</h3>
+            <br></br>
                 <Form onSubmit={(e)=> submit(e)}>
-                <Form.Group className="mb-3">
+                {/* <Form.Group className="mb-3">
                     <Form.Label>Type</Form.Label>
                     <Form.Control onChange={(e)=>handle(e)} id="type" value={data.type}  placeholder="Enter Type" />
                     
-                </Form.Group>
-
+                </Form.Group> */}
+                <Form.Group className="mb-3" >
+                     <Form.Label>Type</Form.Label>
+                     <Form.Select onChange={(e)=>handle(e)} id="type" value={data.type}>
+                     <option>--Please Select One--</option>
+                        <option value="1">Checking</option>
+                        <option value="2">Savings</option>
+                        <option value="3">Credit</option>
+                     </Form.Select>
+                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Nickname</Form.Label>
                     <Form.Control onChange={(e)=>handle(e)} id="nickname" value={data.nickname}  placeholder="Enter Nickname" />
@@ -132,21 +145,23 @@ function CreateAccount () {
                     Submit
                 </Button>
                 </Form>
-                <br></br>
-                <Link to="/customers">
-                <Button variant="outline-success">Back to Customers</Button>
-                </Link>
-                <br></br>
-                <br></br>
-                <Link to="/viewAccounts">
-                    <Button variant="outline-success">View Accounts</Button>
-                    </Link>
+             
                     <br></br>
                     <br></br>
-                    <Link to="/home">
-                    <Button variant="outline-success">Home</Button>
-                    </Link>
               </Container>
+              <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+        </div>
+              
     )
 }
 

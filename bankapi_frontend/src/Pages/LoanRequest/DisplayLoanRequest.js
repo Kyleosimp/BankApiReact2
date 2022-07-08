@@ -61,14 +61,16 @@ function DisplayLoan () {
     return (
       <div class="loan_background">
         <NavigationBar/>
-        <div >
+        {/* <div >
           <h1 class="title_loan">Personal Loans</h1>
-        </div>
+        </div> */}
 
     
 
         <div class="form">
           <Container>
+          <h3 class="title_loan">Personal Loans</h3>
+
             <Form onSubmit={(e) => submit(e)}>
               <Form.Group className="mb-3" controlId="formBalance">
                 <Form.Label class="balance">Account Balance</Form.Label>
@@ -94,6 +96,7 @@ function DisplayLoan () {
               <br></br>
               <br></br>
               <br></br>
+              
               <Button id="submit_loan" variant="success" type="submit">
                 Submit
               </Button>
