@@ -113,20 +113,20 @@ function AccountDetails () {
                
                 </Form>
                 <br></br>
-                <Link to="/customers">
+                {/* <Link to="/customers">
                 <Button variant="outline-success">Back to Customers</Button>
                 </Link>
                 <br></br>
-                <br></br>
+                <br></br> */}
                 <Link to="/viewAccounts">
                     <Button variant="outline-success">View Accounts</Button>
                     </Link>
                     <br></br>
                     <br></br>
-                    <Link to="/home">
+                    {/* <Link to="/home">
                     <Button variant="outline-success">Home</Button>
                     </Link>
-                    <br></br>
+                    <br></br> */}
                 <br></br>
               </Container>
               <br></br>

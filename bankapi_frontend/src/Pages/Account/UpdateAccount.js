@@ -114,14 +114,14 @@ function UpdateAccount () {
                 </Button>
                 </Form>
                 <br></br>
-                <Link to="/viewAccounts">
+                {/* <Link to="/viewAccounts">
                 <Button variant="outline-success">View Accounts</Button>
                 </Link>
                 <br></br>
                     <br></br>
                     <Link to="/home">
                     <Button variant="outline-success">Home</Button>
-                    </Link>
+                    </Link> */}
                     
           <br></br>
           <br></br>
