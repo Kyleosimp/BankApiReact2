@@ -6,10 +6,27 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import "./accountstyle.css";
 import  NavigationBar  from '../Components/NavigationBar';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function CreateAccount () {
+    const successMessage = () => {
+        toast.success(`Successfully Created New Account for Customer ID: ${params.id}`,{
+            position: "top-center",
+            pauseOnHover: true,
+            draggable:false,
+            progress: undefined,
+        })
+      };
+      const errorMessage = () => {
+         toast.error ("Error, try again! ",{
+            position: "top-center",
+            pauseOnHover: true,
+            draggable:false,
+            progress: undefined,
+        })
+       };
     const navigate = useNavigate();
     // /accounts/customer/${customer.id}
     const params = useParams()
@@ -40,7 +57,29 @@ function CreateAccount () {
         setData(newdata);
         console.log(newdata);
     }
-
+    //   function messageDisplay(message, type, styles = {}) {
+    //     switch (type) {
+    //         case type === 'success':
+    //             toast.success(message);
+    //             break;
+    
+    //         case type === 'error':
+    //             toast.error(message);
+    //             break;
+    
+    //         case type === 'info':
+    //             toast.info(message);
+    //             break;
+    
+    //         case type === 'warn':
+    //             toast.warn(message);
+    //             break;
+                
+    //         default:
+    //             toast(message);
+    //             break;
+    //     }
+    // }
 
     function submit(e){
         e.preventDefault();
@@ -56,7 +95,11 @@ function CreateAccount () {
             .then(res => {
                 console.log(res.data);
                 setData(emptyData);
-                navigate(`/viewAccounts`);
+                /*navigate(`/viewAccounts`); */
+                 successMessage();
+            }).catch(err => {
+                console.log(err);
+                errorMessage();
             })
     }
 
@@ -79,9 +122,9 @@ function CreateAccount () {
                      <Form.Label>Type</Form.Label>
                      <Form.Select onChange={(e)=>handle(e)} id="type" value={data.type}>
                      <option>--Please Select One--</option>
-                        <option value="1">Checking</option>
-                        <option value="2">Savings</option>
-                        <option value="3">Credit</option>
+                        <option value="0">Checking</option>
+                        <option value="1">Savings</option>
+                        <option value="2">Credit</option>
                      </Form.Select>
                  </Form.Group>
                 <Form.Group className="mb-3">
@@ -144,11 +187,18 @@ function CreateAccount () {
                 <Button variant="success" type="submit">
                     Submit
                 </Button>
+                <Link to="/viewAccounts">
+                <Button style={{marginLeft:"20px"}} variant="outline-success">View Accounts</Button>
+                </Link>
                 </Form>
              
                     <br></br>
                     <br></br>
               </Container>
+              <div>
+      
+        <ToastContainer />
+      </div>
               <br></br>
                 <br></br>
                 <br></br>

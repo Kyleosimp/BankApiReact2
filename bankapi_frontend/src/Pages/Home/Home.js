@@ -26,7 +26,7 @@ return (
 //      
 //          
 //         <div className="col-md-12" id="welcomeHero"> 
-//           <h1>ELITE 11 TEAM <svg xmlns="http://www.w3.org/2000/svg" /* width="200" height="16"*/  fill="currentColor" class="bi bi-bank2" /* viewBox="0 0 16 16"*/>
+//           <h1>ELITE 11 TEAM <svg xmlns="http://www.w3.org/2000/svg"  width="200" height="16"  fill="currentColor" class="bi bi-bank2" /* viewBox="0 0 16 16"*/>
   <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
 </svg></h1>
 </div>
@@ -60,7 +60,7 @@ return (
       
   <div class="col">
     
-    <div class="card"  style={{marginLeft:"20px"}}>
+    <div class="card"   style={{maxWidth:"300px", maxHeight: "300px",  marginLeft:"20px"}}>
       <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972212765413488/john-removebg-preview.png" alt="a snow-capped mountain range"/>
       <div class="card-body">
         <h2 class="card-title">John Feil</h2>
@@ -69,7 +69,7 @@ return (
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card"  style={{maxWidth:"300px", maxHeight: "300px",  marginLeft:"20px"}}>
       <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972214912888942/luis-removebg-preview.png" alt="a snowy mountain with clouds behind it"/>
       <div class="card-body">
         <h2 class="card-title">Luis Figueroa</h2>
@@ -78,7 +78,7 @@ return (
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card"  style={{maxWidth:"300px", maxHeight: "300px",  marginLeft:"20px"}}>
       <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972213281300591/kyle-removebg-preview.png" alt="a mountain range under a thin layer of clouds"/>
       <div class="card-body">
         <h2 class="card-title">Kyle Simpson</h2>
@@ -89,10 +89,16 @@ return (
 
 </div>
       
-     <br></br> 
+     <br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+
     <div class="row row-cols-3 g-3">
   <div class="col">
-    <div class="card">
+    <div class="card"  style={{maxWidth:"300px", maxHeight: "300px",  marginLeft:"20px"}}>
       <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972215663656981/yev-removebg-preview.png" alt="a snow-capped mountain range"/>
       <div class="card-body">
         <h2 class="card-title">Yevgeny Carranza</h2>
@@ -100,8 +106,9 @@ return (
       </div>
     </div>
   </div>
+
   <div class="col">
-    <div class="card">
+    <div class="card"  style={{ maxWidth:"300px", maxHeight: "300px", marginLeft:"20px"}}>
       <img src="https://media.discordapp.net/attachments/952998643751845968/994972212316606544/aisha-removebg-preview.png?width=447&height=468" alt="a snowy mountain with clouds behind it"/>
       <div class="card-body">
         <h2 class="card-title">Aisha Mundy</h2>
@@ -110,7 +117,7 @@ return (
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card"  style={{maxWidth:"300px", maxHeight: "300px",  marginLeft:"20px"}}>
       <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972215185526915/renne-removebg-preview.png" alt="a mountain range under a thin layer of clouds"/>
       <div class="card-body">
         <h2 class="card-title">Renne Adzadu</h2>
@@ -121,10 +128,15 @@ return (
 
 </div>
 <br></br>
-
-<div class="row row-cols-3 g-3">
+<br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+     <br></br>
+<div class="row row-cols-12 g-3">
   <div class="col">
-    <div class="card">
+    <div class="card" style={{maxWidth:"250px", maxHeight: "250px",  marginLeft:"500px"}}>
       <img src="https://cdn.discordapp.com/attachments/952998643751845968/994972212534714459/emoni-removebg-preview.png" alt="a snow-capped mountain range"/>
       <div class="card-body">
         <h2 class="card-title">Emoni Saylor-Smallwood</h2>
@@ -138,6 +150,13 @@ return (
   </div>
   </div>
 </div>
+<br></br>
+<br></br>
+     <br></br>
+   
+<br></br>
+    
+     <br></br>
 
       
 <div className="container-fluid" >
