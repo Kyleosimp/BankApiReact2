@@ -16,11 +16,14 @@ import CreateBill from './Pages/Bills/CreateBill';
 import DisplayBillsComponent from './Pages/Bills/ListBills';
 import DisplayLoanRequest from './Pages/LoanRequest/DisplayLoanRequest.js';
 import ViewCustomer from './Pages/Customers/ViewCustomer';
+import {ToastContainer, toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function App() {
   return (
+    
     <Router>
       <Routes>
         <Route path="/home" element={<Home/>}></Route>
@@ -45,6 +48,7 @@ function App() {
         <Route path="/*" element={<Home/>}></Route>
       </Routes>
     </Router>
+    
   );
 }
 

@@ -39,7 +39,8 @@
 
     #welcomeHero{
       text-align: center;
-      margin-left: 290px;
+      margin-left: 240px;
+      padding-bottom: 5%;
    
     }
 
@@ -47,7 +48,7 @@
     .card{
       text-align: center;
       text-size-adjust: 50px;
-      padding-top: 10px;
+      /* padding-top: 10px; */
     }
 
     .titleBank{

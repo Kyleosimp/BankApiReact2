@@ -6,7 +6,8 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import NavigationBar from '../Components/NavigationBar';
 import "./Bill.css";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function CreateBill(){
@@ -25,6 +26,22 @@ function CreateBill(){
             </div>
         );
     }
+    const successMessage = () => {
+        toast.success(`Successfully Created New Bill for Customer ID: ${params.id}`,{
+            position: "top-center",
+            pauseOnHover: true,
+            draggable:false,
+            progress: undefined,
+        })
+      };
+      const errorMessage = () => {
+         toast.error ("Error, try again! ",{
+            position: "top-center",
+            pauseOnHover: true,
+            draggable:false,
+            progress: undefined,
+        })
+       };
 
     const params = useParams()
     const API_URL = `http://localhost:8080/accounts/${params.id}/bill`;
@@ -75,6 +92,10 @@ function CreateBill(){
             .then(res => {
                 console.log(res.data);
                 setData(emptyData);
+                successMessage();
+            }).catch(err => {
+                console.log(err);
+                errorMessage();
             })
     }
     
@@ -198,7 +219,9 @@ function CreateBill(){
           <br></br>
           <br></br>
           <br></br>
+          
                 </div>
+                <ToastContainer />
             </div>
     )
 }

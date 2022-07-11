@@ -5,6 +5,7 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import  NavigationBar  from '../Components/NavigationBar';
 import "./customersstyles.css";
+import { useNavigate } from 'react-router-dom';
 
 
 function UpdateCustomer () {
@@ -27,7 +28,7 @@ function UpdateCustomer () {
 
     const params = useParams();
 
-
+    const navigate = useNavigate();
     useEffect(()=> {
         getCustomerByid();
     }, [])
@@ -78,6 +79,7 @@ function UpdateCustomer () {
         })
             .then(res => {
                 console.log(res.data);
+                navigate("/customers");
             })
     }
 

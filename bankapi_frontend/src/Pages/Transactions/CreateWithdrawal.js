@@ -7,6 +7,8 @@ import "./Transactions.css";
 import NavigationBar from '../Components/NavigationBar';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function CreateWithdrawal () {
 
@@ -15,6 +17,22 @@ function CreateWithdrawal () {
     const API_URL = `http://localhost:8080/accounts/${params.id}/withdrawals`;
 
   //  const params = useParams()
+  const successMessage = () => {
+    toast.success(`Successfully Created New Withdrawal for Customer ID: ${params.id}`,{
+        position: "top-center",
+        pauseOnHover: true,
+        draggable:false,
+        progress: undefined,
+    })
+  };
+  const errorMessage = () => {
+     toast.error ("Error, try again! ",{
+        position: "top-center",
+        pauseOnHover: true,
+        draggable:false,
+        progress: undefined,
+    })
+   };
 
     const emptyData = {
         type: "Withdrawal",
@@ -60,6 +78,10 @@ function CreateWithdrawal () {
             .then(res => {
                 console.log(res.data);
                 setData(emptyData);
+                successMessage();
+            }).catch(err => {
+                console.log(err);
+                errorMessage();
             })
     }
 
@@ -102,8 +124,8 @@ function CreateWithdrawal () {
                      {/* <Form.Control onChange={(e)=>handle(e)} id="medium" value={data.medium} placeholder="Enter Medium" /> */}
                      <Form.Select onChange={(e)=>handle(e)} id="medium" value={data.medium}>
                      <option>--Please Select One--</option>
-                        <option value="1">Balance</option>
-                        <option value="2">Rewards</option>
+                        <option value="0">Balance</option>
+                        <option value="1">Rewards</option>
                      </Form.Select>
                  </Form.Group>
                  <Form.Group className="mb-3" >
@@ -156,7 +178,7 @@ function CreateWithdrawal () {
           <br></br>
           <br></br>
           <br></br>
-
+          <ToastContainer />
           
     </div>
 

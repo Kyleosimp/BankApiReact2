@@ -11,6 +11,7 @@ import  NavigationBar  from '../Components/NavigationBar';
 
 
 
+
 function UpdateAccount () {
 
     // /accounts/customer/${customer.id}
@@ -19,7 +20,6 @@ function UpdateAccount () {
   const API_URL = `http://localhost:8080/accounts/${params.id}`;
 
   //  const params = useParams()
-
 
 
   const navigate = useNavigate();
@@ -68,7 +68,12 @@ function UpdateAccount () {
         })
             .then(res => {
                 console.log(res.data);
-                navigate(`/viewAccounts`);
+             
+                 navigate(`/viewAccounts`);
+              
+            }).catch(err => {
+                console.log(err);
+                alert(err);
               
             })
     }

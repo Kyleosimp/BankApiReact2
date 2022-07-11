@@ -5,6 +5,9 @@ import { Table,Button, Container } from 'react-bootstrap';
 import Axios from 'axios';
 import "./accountstyle.css";
 import  NavigationBar  from '../Components/NavigationBar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 class ListAccounts extends Component {
@@ -30,8 +33,12 @@ class ListAccounts extends Component {
 
     deleteAccount(id) {
         Axios.delete(`http://localhost:8080/accounts/${id}`);
-        
+        toast.success("Deleted Account Successfully");
+    //        const successMessage = () => {
+    //     toast.success(`Successfully Created New Account for Customer ID: `)
+    //   };
         this.refreshPage();
+      
     }
 
 
@@ -59,17 +66,20 @@ class ListAccounts extends Component {
                  
                  
                    <Link to={`/accountsDetails/customer/${account.id}`}>
-                  <Button variant="primary" style={{ marginRight: '0.7em'}}>View</Button>
+                  <Button variant="primary" style={{ marginRight: '0.5em'}}>View</Button>
                   </Link>
                   <Link to={`/accounts/withdrawal/${account.id}`}>
-                  <Button variant="primary" style={{ marginRight: '0.7em'}}>Create Withdrawal</Button>
+                  <Button variant="primary" style={{ marginRight: '0.5em'}}>Create Withdrawal</Button>
                   </Link>
                   <Link to={`/accounts/deposit/${account.id}`}>
-                  <Button variant="primary"  style={{ marginRight: '0.7em'}}>Create Deposit</Button>
+                  <Button variant="primary"  style={{ marginRight: '0.5em'}}>Create Deposit</Button>
                   </Link>
                   <Link to={`/accounts/bill/${account.id}`}>
-                    <Button variant="primary">Create Bill</Button>
+                    <Button  variant="primary" style={{}}>Create Bill</Button>
                     </Link>
+
+                    <p style={{ marginRight: '0.10em'}} > </p>
+
                   </td>
                 </tr>  
             )

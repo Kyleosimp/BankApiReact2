@@ -5,10 +5,31 @@ import { Button, Container, Form } from 'react-bootstrap';
 import Axios from 'axios';
 import  NavigationBar  from '../Components/NavigationBar';
 import "./customersstyles.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function CreateCustomer () {
-    const API_URL = 'http://localhost:8080/customers';
+    // const API_URL = 'http://localhost:8080/customers';
+
+    const successNewCustomer = () => {
+        toast.success("Successfully Created New Customer ",{
+            position: "top-center",
+            pauseOnHover: true,
+            draggable:false,
+            progress: undefined,
+        })
+      };
+      const errorMessage = () => {
+         toast.error ("Error, try again! ",{
+            position: "top-center",
+            pauseOnHover: true,
+            draggable:false,
+            progress: undefined,
+        })
+       };
+
+       const API_URL = 'http://localhost:8080/customers';
 
     const emptyData = {
         first_name: "",
@@ -55,6 +76,10 @@ function CreateCustomer () {
             .then(res => {
                 console.log(res.data);
                 setData(emptyData);
+                successNewCustomer();
+            }).catch(err => {
+                console.log(err);
+                errorMessage();
             })
     }
 
@@ -130,6 +155,7 @@ function CreateCustomer () {
               <br></br>
               <br></br>
               <br></br>
+              <ToastContainer />
         </div>
     )
 }
