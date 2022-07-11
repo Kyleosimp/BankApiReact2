@@ -100,6 +100,7 @@ function DisplayLoan () {
               <Button id="submit_loan" variant="success" type="submit">
                 Submit
               </Button>
+              
             </Form>
             <br></br>
             
