@@ -1,6 +1,6 @@
 .form{
     position: relative;
-    top: 25px;
+    top: 20px;
     left: 380px;
     background-color: beige;
     width: 50%;
@@ -45,7 +45,8 @@
 
 #submit_loan{
     position: relative;
-    top: 80px;
+    top: 60px;
+
     
 }
 
